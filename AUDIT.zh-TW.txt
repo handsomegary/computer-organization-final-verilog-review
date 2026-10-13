@@ -1,0 +1,112 @@
+檢查日期：2026-10-13
+範圍：四份來源內所有手寫 Verilog 及既有 testbench，共 115 個 .v。
+方法：逐檔靜態檢查、module 相依與接腳檢查、頂層編譯及獨立 assertion 測試。
+原始碼完整保存；本次沒有修正功能。
+
+一、指定簡報的需求
+
+第 2 頁：Verilog MIPS，十種指令 lw、sw、add、addi、sub、and、or、slt、beq、jump。
+Level A 為 single cycle、B 為 pipeline、C 為 hazard detection。簡報沒有說
+全部 level 都必須完成，也沒有列評分權重，以下分別評估其聲稱的架構與功能。
+
+第 3–4 頁：設計一個或數個程式，轉為機器碼放入 instruction memory。
+第 5 頁圖包含 PC+4、branch immediate << 2 與 jump address 的組合路徑。
+第 7 頁圖包含 forwarding、load-use hazard detection、PC/IF-ID stall 與 bubble。
+第 8 頁的相依程式：
+    sub $2,$1,$3
+    and $12,$2,$5
+    or  $13,$6,$2
+    add $14,$2,$2
+    sw  $15,100($2)
+此程式沒有 lw，故另外測試 load-use；sw 在此主要測試 base register 相依。
+
+第 9 頁另要求 RTL、top-module testbench、含架構與模擬的 PDF。
+本次依使用者指示只擷取 Verilog，不對已排除的原有 PDF 做完整繳交包評分。
+
+判讀限制：第 4 頁使用非標準暫存器別名，且 +40/+400 註記不一致，因此沒有
+單憑別名編號判不合格。signed slt 回傳 0/1、addi 不寫 memory 等採用 MIPS
+指令語意作為功能檢查。未聲稱符合完整 MIPS32 規格、例外或溢位機制。
+圖未明訂 branch delay-slot 政策，分支測試採一般教學 datapath 的無 delay-slot
+語意；若版本要求以 NOP 排程，須自行說明，不能據此宣稱完整自動 hazard 處理。
+
+二、各版本結論
+
+01 COMPUTER program FINAL（10 檔）
+    未符合。ALUcontrol.v 與 EX.v 重複宣告 EX，DataMem.v 與 MEM.v
+    重複宣告 MEM。即使選取真正 RTL、避開兩個空殼，仍有功能錯誤。
+    EX.v:21–107 沒有 slt case，實測 slt 會沿用上一筆 ADD 的結果。
+    EX.v 的 jump 未在後續一般指令清除，實測 ADD 後 jump 仍為 1。
+    MEM.v:39 把 Alu_result 宣告成未賦值的 output reg，頂層又與 EX 共用
+    該線，存在多重驅動／X 問題。WB 初始狀態與 IF branch/jump 目標亦有問題。
+
+02 final_pj
+    A 單週期（15 檔）：結構及十種指令 decode 最完整，仍未完全符合。
+      single-cycle/rtl/Controller.v:44–50 的 addi 設 MEMWRITE=1。
+      獨立測試已驗證其算術、邏輯、lw/sw 結果及 branch/jump 的基本案例，
+      但 addi 會破壞資料記憶體 sentinel，不能因暫存器值正確就判合格。
+    B Pipeline（19 檔）：有五階段及 pipeline registers，仍未完全符合。
+      pipeline/rtl/CONTROLLER.v:41–47 同樣有 addi 誤寫。
+      Controller 與 CPU_PIPELINE.v 沒有 j 的 PC 路徑。
+      taken branch 沒有清除較年輕指令，測試發現錯誤路徑仍改寫暫存器。
+      這個 level 未實作 C 的一般 data-hazard 自動處理，測試普通指令結果時
+      刻意插入 NOP，沒有拿這些排程後的成功當作 hazard 合格。
+    C Hazard（22 檔）：有 forwarding 與 load-use stall/bubble，仍未完全符合。
+      hazard/rtl/Controller.v:43–49 同樣有 addi 誤寫，且沒有 j。
+      hazard/rtl/CPU_NoHazard.v:89 將未 forwarding 的 READ_DATA_2 傳入 EX/MEM，
+      相鄰 add r1,r2,r3; sw r1,0(r0)，r2=2、r3=3 時實測存入 0，而非 5。
+      load-use 的獨立整合案例可正確停一拍；這不代表 store-data/control hazard
+      也正確。InstructionMemory.v 的 9–11 格未初始化。
+
+03 計組final project／107303009_FinalProject.rar
+    A 單週期（15 檔）：與 02 的架構相近，有全部十種 decode，但同樣 addi 誤寫。
+    B Pipeline（19 檔）：與 02 的架構相近，同樣缺 j、addi 誤寫及 branch 問題。
+      與 02 比對：A 有 14/15、B 有 18/19 檔忽略註解／空白後相同；各自
+      instruction memory 程式不同，來源與原始位元組仍分開保存。
+    C Hazard（8 檔）：獨立實作，未符合。
+      hazard/rtl/Reg.v:12–35 的 scalar output 與 vector reg 宣告衝突，
+      Icarus 頂層 elaboration 報九個寬度錯誤。此結果是該工具下的可攜性問題。
+      即使只測可獨立編譯的 ALU/Dmemory，也已重現功能缺陷：
+        ALU.v:93 slt 使用 unsigned 比較，true 回傳 0xffffffff 而非 1。
+        ALU.v:28,51–64 的 forwarding 會覆蓋 ALUSrc 所選 immediate。
+        Dmemory.v:32 的 sensitivity list 只有 memwrite/memread，連續兩筆
+          相同控制的 load/store 不處理更新的 address/data。
+      另有靜態證據：沒有 j、addi 選錯 writeback、雙來源 forwarding 的整體
+      else-if 優先權缺陷、store-data 未 forwarding。因原始頂層無法 elaborate，
+      沒有將其整合 forwarding／原始 ROM 最終結果標成已通過模擬。
+
+04 FInal project（7 檔）
+    未符合。rtl/Main.v:134–152 連接的 EX.Alu_result 與 MEM.result
+    不存在於模組接腳，原樣無法完成頂層 elaboration。
+    單獨以原始 Execution.v 測試可重現錯誤 forwarding：把資料值等於 2
+    當成相依條件，合法的 2+5 被算成 5，2-5 被算成 -5，2|4 被算成 4。
+    另有硬編碼 branch/jump 位址與不完整指令程式。
+
+三、驗證如何解讀
+
+既有 testbench 多只產生 clock/reset，沒有 assertion；能執行或產生波形
+無法證明指令結果。verification/ 的新測試會比較預期暫存器／memory 值，
+失敗時使用 $fatal；附有普通算術等通過基準，避免只看見失敗卻不知是否正確驅動。
+
+部分整合測試在 testbench 內透過 hierarchy 初始化 ROM、register、memory，
+以隔離特定指令與相依性。這只建立測試情境，未改動保存的 RTL 或原有程式。
+未做 FPGA synthesis、timing closure 或完整形式驗證。
+
+reports/ 另保存所有實際 return code、工具診斷與 assertion 結果。
+若有編譯器／環境異常，與原始碼的語法錯誤及 assertion 失敗分開記錄，
+不把工具異常當成 Verilog 不符合的理由。
+
+最終使用官方 Windows 套件 Icarus Verilog 12.0 (devel)，版本識別
+s20150603-1539-g2693dd32b，完成 38 個案例。最終執行沒有工具 crash 或 timeout。
+33 個案例正常完成 elaboration；5 個案例有編譯錯誤，對應 01 重複模組、
+03 hazard 的接腳寬度、04 named-port 錯誤三類問題，其中 03 重複出現於
+原始頂層及兩個無法進行的整合測試。
+27 個實際執行的 assertion 測試：10 通過、17 失敗。
+另有 4 個原始 testbench 只作 smoke run，不計入功能通過數。
+33 個成功 elaboration 的 compiler return code 均為 0。
+
+四、完整性
+
+source-manifest.json 逐檔記錄來源與 SHA-256，115 檔均保持來源位元組。
+4 個 glbl.v 是 Xilinx 自動產生的全域模擬支援檔，依擷取原始碼目的排除。
+來源一 ZIP 的 10 個 .v 全部與外層版本相同，manifest 保留比對證據。
+未搬動、刪除或覆寫 Downloads 下任何原始檔案。

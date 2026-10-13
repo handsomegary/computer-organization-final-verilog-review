@@ -1,0 +1,7 @@
+.verification-build/
+__pycache__/
+*.vvp
+*.vcd
+*.wdb
+*.exe
+*.log

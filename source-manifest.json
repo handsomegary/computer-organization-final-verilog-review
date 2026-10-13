@@ -1,0 +1,950 @@
+{
+  "source_roots": {
+    "01-computer-program-final": "計算機組織/COMPUTER program FINAL",
+    "02-final-pj": "final_pj",
+    "03-final-project-rar": "計組final project/計組final project/107303009_FinalProject.rar :: 107303009_FinalProject/Codes",
+    "04-final-project": "FInal project"
+  },
+  "files": [
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/ALUcontrol.v",
+      "path": "sources/01-computer-program-final/ALUcontrol.v",
+      "bytes": 508,
+      "sha256": "dfcb3f449fb3f27ad852d758951ebfbb6faba52562a473cbb3ebad5d8d5fcd83"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/DataMem.v",
+      "path": "sources/01-computer-program-final/DataMem.v",
+      "bytes": 506,
+      "sha256": "5696651840a589768a2de960ee554a62819b36b6c1c34b3d9b4f88cd38b374d8"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/EX.v",
+      "path": "sources/01-computer-program-final/EX.v",
+      "bytes": 2434,
+      "sha256": "67fb5b53e42c27ae57e7f21874aecacc37f7f810435e143fac0fd1687b08e1ae"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/finaltb.v",
+      "path": "sources/01-computer-program-final/finaltb.v",
+      "bytes": 969,
+      "sha256": "7981df3e1e273eb7a8faac97721a15c76c68b6cda07dabe0a9c343d020e347c8"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/ID.v",
+      "path": "sources/01-computer-program-final/ID.v",
+      "bytes": 4169,
+      "sha256": "559e3a92c54a04c325bb0f547d18e2c17e091dd4d20dc6f3f6973b6b48356108"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/IF.v",
+      "path": "sources/01-computer-program-final/IF.v",
+      "bytes": 2115,
+      "sha256": "7125a355408cfb5094c4c34cc8306d572ed451dd04c0ce4a91a0e696d797b916"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/mark.v",
+      "path": "sources/01-computer-program-final/mark.v",
+      "bytes": 1598,
+      "sha256": "3e09274f98975fd12ab268ac327d714cd85c969b5839c5aff7f835962a2f308f"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/MarkLoveGarry.v",
+      "path": "sources/01-computer-program-final/MarkLoveGarry.v",
+      "bytes": 4164,
+      "sha256": "fe669a8b761dc78f1bafd80a39148b96133fd964b44e19c4563c20ce0b4c28c6"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/MEM.v",
+      "path": "sources/01-computer-program-final/MEM.v",
+      "bytes": 2393,
+      "sha256": "b00c3fed4101c5517d7593bf6b39d399f1ca585015620895b438a386389d579f"
+    },
+    {
+      "source": "01-computer-program-final",
+      "original_path": "Final/WB.v",
+      "path": "sources/01-computer-program-final/WB.v",
+      "bytes": 2240,
+      "sha256": "1236edafb6b29199a919fb60803d3c5f7bdf41a213836f48bff167414a7c6b8f"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sim_1/new/CPU_NoHazard_tb.v",
+      "path": "sources/02-final-pj/hazard/tb/CPU_NoHazard_tb.v",
+      "bytes": 1172,
+      "sha256": "06f976fbbf7e6cdf02bb9dbe8dbe66bced725b3d74218ebabfd1b39490c391a1"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Add.v",
+      "path": "sources/02-final-pj/hazard/rtl/Add.v",
+      "bytes": 134,
+      "sha256": "3beb4abf02e62900eaf2332ff53e82cf6a1bdd42f87b6389e16988c32de80683"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ALU.v",
+      "path": "sources/02-final-pj/hazard/rtl/ALU.v",
+      "bytes": 555,
+      "sha256": "2068cc61afc008a8a309c273ea21d74c1dcc5ae0a257274864260d1636dc76e0"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ALU_Controller.v",
+      "path": "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "bytes": 913,
+      "sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Controller.v",
+      "path": "sources/02-final-pj/hazard/rtl/Controller.v",
+      "bytes": 1676,
+      "sha256": "b76945267032215810e6999cc03ab62303ac669d6feaa96ede415eebc2f22918"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/CPU_NoHazard.v",
+      "path": "sources/02-final-pj/hazard/rtl/CPU_NoHazard.v",
+      "bytes": 6207,
+      "sha256": "9eb24588ffb023d5b6e7b3b7837705b2b0c516d2258c3dd7ca725a70b66e1d6c"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/DataMemory.v",
+      "path": "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "bytes": 1607,
+      "sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/EX_MEM.v",
+      "path": "sources/02-final-pj/hazard/rtl/EX_MEM.v",
+      "bytes": 1275,
+      "sha256": "4b9d7d65fbc551585052673bff7f9b1fce7998debe8cf16a808ffadb29fc69fc"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ForwardingUnit.v",
+      "path": "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
+      "bytes": 838,
+      "sha256": "9ad3d6489257804bf37864ad0b44e198cc07e09583b8397ef5977d6a63b0963b"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Hazard_detection_unit.v",
+      "path": "sources/02-final-pj/hazard/rtl/Hazard_detection_unit.v",
+      "bytes": 497,
+      "sha256": "bd918593b331a74e0661508207dbe9fb7ec2d4f30fdc8eb46690f2502ad0e76f"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/ID_EX.v",
+      "path": "sources/02-final-pj/hazard/rtl/ID_EX.v",
+      "bytes": 1570,
+      "sha256": "b4ab03710a64d08d38458b087eee3bda67fb3bb50a53692fae182a890f97f550"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/IF_ID.v",
+      "path": "sources/02-final-pj/hazard/rtl/IF_ID.v",
+      "bytes": 433,
+      "sha256": "eb6cac8f0f2be08abe4d350cb1a2bfed127784cf28f6ba120aee2d11d7462aa7"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/InstructionMemory.v",
+      "path": "sources/02-final-pj/hazard/rtl/InstructionMemory.v",
+      "bytes": 1296,
+      "sha256": "fc7cc6d360cd2e4e5e4c994ef4b7b48117739e5eda16df7aa508f70310b423bc"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/MEM_WB.v",
+      "path": "sources/02-final-pj/hazard/rtl/MEM_WB.v",
+      "bytes": 804,
+      "sha256": "83c5c2603480bc7d7347e66d2e79771f30270e762304423dd77d29f7f378de0f"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Mux_32Bits.v",
+      "path": "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "bytes": 166,
+      "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Mux_32Bits_3input.v",
+      "path": "sources/02-final-pj/hazard/rtl/Mux_32Bits_3input.v",
+      "bytes": 322,
+      "sha256": "20baa04d7a46900f217a6256209b997ddeae7a97d4832b0b9a6a139d3df6c02e"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Mux_5Bits.v",
+      "path": "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "bytes": 163,
+      "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/PC.v",
+      "path": "sources/02-final-pj/hazard/rtl/PC.v",
+      "bytes": 293,
+      "sha256": "42a2c22a6fe300ed5982c01b0177691851c45665d218b605f262ffc0ebd535a5"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Register_file.v",
+      "path": "sources/02-final-pj/hazard/rtl/Register_file.v",
+      "bytes": 984,
+      "sha256": "5239eae1b006789a5954155a14857bf3eda46d9defccb4a471eaaf4a14a329f8"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Shift_Left_2_26BitsTo28Bits.v",
+      "path": "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "bytes": 158,
+      "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Shift_Left_2_32BitsTo32Bits.v",
+      "path": "sources/02-final-pj/hazard/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "bytes": 158,
+      "sha256": "85f49046a6143070bc6dcaf4bfaf2bba17f50237d16aa58f57fd7a2b6ede863e"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.srcs/sources_1/new/Sign_Extend.v",
+      "path": "sources/02-final-pj/hazard/rtl/Sign_Extend.v",
+      "bytes": 297,
+      "sha256": "a72bc759678836da3dd158124cdc7586057cd2589d080add6c802faedc8689fd"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sim_1/new/CPU_Pipeline_tb.v",
+      "path": "sources/02-final-pj/pipeline/tb/CPU_Pipeline_tb.v",
+      "bytes": 969,
+      "sha256": "93fc4038d585b0e9cb7447e2ff69e3c2eea13831609c558aa693d5f1ff45ddea"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ADD.v",
+      "path": "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "bytes": 133,
+      "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ALU.v",
+      "path": "sources/02-final-pj/pipeline/rtl/ALU.v",
+      "bytes": 579,
+      "sha256": "97d1ea2b414d7d791b3923d6d0915c32c5b189ed9cdd8abae003f34c9b35a790"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ALU_CONTROLLER.v",
+      "path": "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "bytes": 913,
+      "sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/CONTROLLER.v",
+      "path": "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
+      "bytes": 1613,
+      "sha256": "1aff8c91e01411dc4971f648ea5e9588b13b532316188b029bf30e48198962b6"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/CPU_PIPELINE.v",
+      "path": "sources/02-final-pj/pipeline/rtl/CPU_PIPELINE.v",
+      "bytes": 5230,
+      "sha256": "4dc8b4c5fcb49d87576ba438876c1dc74196f6448da9f345a0a4eecaa1489661"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/DATAMEMORY.v",
+      "path": "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "bytes": 1607,
+      "sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/EX_MEM.v",
+      "path": "sources/02-final-pj/pipeline/rtl/EX_MEM.v",
+      "bytes": 1274,
+      "sha256": "f09ffe37e29203a02e1fd7540c34dbe54b0d6e0522e81883cfc6ff56ba202490"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/ID_EX.v",
+      "path": "sources/02-final-pj/pipeline/rtl/ID_EX.v",
+      "bytes": 1507,
+      "sha256": "1b7ca36543ad182afb78df9e1aa60a64f16510df9ddd69c76919a51f3ac251ec"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/IF_ID.v",
+      "path": "sources/02-final-pj/pipeline/rtl/IF_ID.v",
+      "bytes": 298,
+      "sha256": "530df6dae74b8fdb35cfe8f48d3b431137b91eec2489b1827b1e3993288424d4"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/INSTROCTIONMEMORY.v",
+      "path": "sources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "bytes": 1556,
+      "sha256": "2f36490001a385403e770604a022c6e4930fdf1b9f71cef4d745f93df773d662"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/MEM_WB.v",
+      "path": "sources/02-final-pj/pipeline/rtl/MEM_WB.v",
+      "bytes": 803,
+      "sha256": "5621b5794e748e5e0b17bf32265fd7c7f33fe3ff420c1b069860e936006e4260"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/MUX_32BITS.v",
+      "path": "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "bytes": 166,
+      "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/MUX_5BITS.v",
+      "path": "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "bytes": 163,
+      "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/PC.v",
+      "path": "sources/02-final-pj/pipeline/rtl/PC.v",
+      "bytes": 223,
+      "sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/REGISTER_FILE.v",
+      "path": "sources/02-final-pj/pipeline/rtl/REGISTER_FILE.v",
+      "bytes": 659,
+      "sha256": "d9615bfbbeccc3941177551cdf580fdf062aabc8cfa927c391d6e0be7c913c72"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "path": "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "bytes": 158,
+      "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "path": "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "bytes": 157,
+      "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.srcs/sources_1/new/SIGN_EXTEND.v",
+      "path": "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v",
+      "bytes": 296,
+      "sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sim_1/new/SINGLE_CYCLE_TB.v",
+      "path": "sources/02-final-pj/single-cycle/tb/SINGLE_CYCLE_TB.v",
+      "bytes": 829,
+      "sha256": "c24e8c98201cb8092d65a4839519c9682bcf36c335112c46b38c256911cfb570"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Add.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Add.v",
+      "bytes": 133,
+      "sha256": "d936d4bee791be5f0182e951b62f90e0bb1abda057bc68f1e4293e419f52088b"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/ALU.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/ALU.v",
+      "bytes": 554,
+      "sha256": "40ad80dab1f5571fae22886a85375790fabcb29867ab806ce5eb41d11525e267"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/ALU_Controller.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/ALU_Controller.v",
+      "bytes": 913,
+      "sha256": "8cb0d42ac34c823c162bd5c732e89c7ae2ec6a4a85691137ecdd002740e8498c"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Controller.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Controller.v",
+      "bytes": 2002,
+      "sha256": "18b80d88728b9cf2ed9420c3dbb5bf4cb70a82710d1c4311fc244f98771952d4"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/CPU_SingleCycle.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/CPU_SingleCycle.v",
+      "bytes": 2583,
+      "sha256": "39993b5c20aa01cda7c4bd9803baa75490e2dd2c09a3fa5c0d69d2ec547b21c1"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/DataMemory.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/DataMemory.v",
+      "bytes": 1607,
+      "sha256": "def13c1a616cbd8e50a96ecee05c057eaae8ca0fa852f987db4f42407d003518"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/InstructionMemory.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/InstructionMemory.v",
+      "bytes": 1631,
+      "sha256": "e522b9ab9a29c54e1570477d6876d059940326857f3771e8bb45bc039538de46"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Mux_32Bits.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Mux_32Bits.v",
+      "bytes": 166,
+      "sha256": "dbb1e2bf25d4a256bd3b0de557b1eb7e0c0921c83866cbfbb4d2e3c87d4f84b5"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Mux_5Bits.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Mux_5Bits.v",
+      "bytes": 163,
+      "sha256": "6bd7654836390e413bea74d24b72464b630f7a152c41b2ba332ba74bd2be462d"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/PC.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/PC.v",
+      "bytes": 223,
+      "sha256": "7a7c22b47d11e050445f62d1168f8e61de714ad339f77da36adb94e89d62ef48"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Register_File.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Register_File.v",
+      "bytes": 659,
+      "sha256": "aa99777c1598f5227208a11b70a09963be05b005b52d2aef8a2555d332503fa7"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Shift_Left_2_26BitsTo28Bits.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "bytes": 158,
+      "sha256": "2600bc006842a4a64ca6278891beef2b5255855ff40e88536624166e41b2d28a"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Shift_Left_2_32BitsTo32Bits.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "bytes": 157,
+      "sha256": "0ba33bbe330845606e43255d224f7d245ae3edd89753b6a61f77c0faa5e2028b"
+    },
+    {
+      "source": "02-final-pj",
+      "original_path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.srcs/sources_1/new/Sign_Extend.v",
+      "path": "sources/02-final-pj/single-cycle/rtl/Sign_Extend.v",
+      "bytes": 296,
+      "sha256": "7638aca95ed3cb9014fd516ac6b461f290fe06ae08fece45e4fa985cd55e634d"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sim_1/new/SINGLE_CYCLE_TB.v",
+      "path": "sources/03-final-project-rar/single-cycle/tb/SINGLE_CYCLE_TB.v",
+      "bytes": 821,
+      "sha256": "1324291501d78363847238e8e0a42f2dfcd0b5f0f842ab785bbd49eccfa1d874"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Add.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+      "bytes": 134,
+      "sha256": "61084657dfb7d7cf3a5fa7b219d5037cb1b8756242d44697c69939b6f125a7db"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/ALU.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "bytes": 555,
+      "sha256": "f7489e70f417a2c6adc8f50c3b004a35cd4332aaf192578f663100d49a8a80b0"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/ALU_Controller.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "bytes": 918,
+      "sha256": "8dc94fbd4984d07886d7aca4bcb16ea5195fb71af1d0d35cd4ad5f67818a84ed"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Controller.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "bytes": 1995,
+      "sha256": "5226b5b0734b8c6dc7e62fb02262cf66730d754aa1b3dea960b7615985b2f9f3"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/CPU_SingleCycle.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+      "bytes": 2583,
+      "sha256": "041076cfe6daedb5edf114b9709ed795c987284df37cf3282a91698c288ee877"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/DataMemory.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+      "bytes": 927,
+      "sha256": "9583a862c2d3590167a98ffd591ad596d7880c228a5f33516f224ef1cc05e2e6"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/InstructionMemory.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+      "bytes": 1351,
+      "sha256": "5535ebbadc022f59f83da35bfc4d266467f26e6d5a6429ba96916810d303f61d"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Mux_32Bits.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+      "bytes": 167,
+      "sha256": "5946244149be5ac2160eedb71b303d51db000a26e69e879ddd233071f2e8b0c6"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Mux_5Bits.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "bytes": 164,
+      "sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/PC.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+      "bytes": 224,
+      "sha256": "361601a30f2145d4d20cc8634b32dbb47b0eba2479520248377e8ac0c37cb292"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Register_File.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+      "bytes": 658,
+      "sha256": "413948d82d9e4cfd46c05642ee2577cf1c82afcd6cb38bb2095318c3c853dcb3"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Shift_Left_2_26BitsTo28Bits.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "bytes": 159,
+      "sha256": "508370e9cc012819d063135857173b74327810802d825361fc35d893c3c0a4a8"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Shift_Left_2_32BitsTo32Bits.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "bytes": 158,
+      "sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "01SingleCycle/sources_1/new/Sign_Extend.v",
+      "path": "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+      "bytes": 297,
+      "sha256": "97a832d56b07a70175af5713c0258e168ec6bc84b913a10013d414c52d41486e"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sim_1/new/CPU_Pipeline_tb.v",
+      "path": "sources/03-final-project-rar/pipeline/tb/CPU_Pipeline_tb.v",
+      "bytes": 960,
+      "sha256": "2540ea4c8037e7d263c711e6f3ea7cc82b7e98af5674e2c68c5691af2fb3e13c"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/ADD.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "bytes": 134,
+      "sha256": "d8c04dc7d44fd04708b77e3f72ab7de33754bdbb8da27efdee29cd9241c3cb72"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/ALU.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "bytes": 580,
+      "sha256": "b5a4a863d5b4b3a43b1d3cf08de3b88bd38b84932c7a5a28572c3a93d090ae60"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/ALU_CONTROLLER.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "bytes": 914,
+      "sha256": "7f69efb72332814448079b096c356a75ccbb0a2c3a230ea2b14242a44ca0802f"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/CONTROLLER.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "bytes": 1605,
+      "sha256": "856e26d30dd6f0a0114b8f1c3e87edadfd88722e4afd510564d2c123b526dee0"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/CPU_PIPELINE.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "bytes": 5231,
+      "sha256": "f36a1ed1770ef1391448264627cfa4a9f1572755839c957f3a5b7a0746b4a012"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/DATAMEMORY.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "bytes": 927,
+      "sha256": "5a7237ecd6bbae1ff873828c3d8ed2f9f6c08d1df55eab0d6ea9aa4db4dcc38c"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/EX_MEM.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "bytes": 1275,
+      "sha256": "962b386cf8badbfb95ed4b1ab24171d0a83e85d94f86b46665c90d59ead36d66"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/ID_EX.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "bytes": 1508,
+      "sha256": "2b835a0c4d618024143c2e02f8ceb59fa1a8bd0b56f736afe3252a232bcce412"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/IF_ID.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "bytes": 299,
+      "sha256": "cdeee3a0d76bad0fc8814102dd8ae23f34d4596fd4693ba6b3509760e51400df"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/INSTROCTIONMEMORY.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "bytes": 1312,
+      "sha256": "e605ad9ad9d8e5b70388f58ae8f4694ff56325d5325e723171acaee50e24a066"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/MEM_WB.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "bytes": 804,
+      "sha256": "32ad7666422878a52e996a7d0135dda34b16bd6347a32634691bb1507a5285b5"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/MUX_32BITS.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "bytes": 167,
+      "sha256": "57c588a8fbc94b2f0c6151ad0ed5639e5c8f9819ac294b562e52a12887cc733e"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/MUX_5BITS.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "bytes": 164,
+      "sha256": "885bbdabe27d6eb7aa74b060e63e12f88606db81d99684c15afbaff581d9961d"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/PC.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "bytes": 224,
+      "sha256": "96ec50a315182d063b77d8f900a212f7fc21864790414b2e141c3f7a42e2b22e"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/REGISTER_FILE.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "bytes": 660,
+      "sha256": "ff400458fd222d4092a949f589c81e861928e15e96615e2c050e79391af7de64"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "bytes": 159,
+      "sha256": "8ceaa65aa9ddcb855b8b0e769617185d474ccfd53e39ba9b4f87f65fdc6f6ed4"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "bytes": 158,
+      "sha256": "d6e50d62fa6464db7100ca2b85dc65949663c058d74afaabffaca8cde8cc3cbe"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "02Pipeline/sources_1/new/SIGN_EXTEND.v",
+      "path": "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+      "bytes": 297,
+      "sha256": "b4cb5b6fe16c061c708c5862822aa6b60f13b07612b759b0c6930d89be85b59e"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sim_1/new/TB.v",
+      "path": "sources/03-final-project-rar/hazard/tb/TB.v",
+      "bytes": 601,
+      "sha256": "db5e569047a2fa3d3cc561648f903810c86082fce47dacab7f06257b0cf83010"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sources_1/new/ALU.v",
+      "path": "sources/03-final-project-rar/hazard/rtl/ALU.v",
+      "bytes": 2167,
+      "sha256": "73b2ccdd577bd6f9b702f4cd58ec5ed9ef5d1c32cf19c55d442423c6989651eb"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sources_1/new/CPU.v",
+      "path": "sources/03-final-project-rar/hazard/rtl/CPU.v",
+      "bytes": 5615,
+      "sha256": "6427667df7404de54b81fe64a1699028e4de7cacd9c9fb8a48d1f5fa73b4de47"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sources_1/new/Dmemory.v",
+      "path": "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
+      "bytes": 4370,
+      "sha256": "2b6da14bee8b87e30583de55b7fa04da8198bfcd57d71ef85ee067f8fea66a32"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sources_1/new/EXandMEM.v",
+      "path": "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
+      "bytes": 1070,
+      "sha256": "0692a4aad7c803001db1b270312cb53532bca66a2648387e2cbfa8a61f6fd3c7"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sources_1/new/MUX.v",
+      "path": "sources/03-final-project-rar/hazard/rtl/MUX.v",
+      "bytes": 578,
+      "sha256": "cb6223de4ab8ac154faa7e9f3d40dd4fd1dbf28f39c35a7ba17fe89c48c32d5f"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sources_1/new/PC.v",
+      "path": "sources/03-final-project-rar/hazard/rtl/PC.v",
+      "bytes": 1775,
+      "sha256": "62243a2f4f3dbd63d38ebeb1bb30dae9fc70c0f3899e82b2395857da56813d08"
+    },
+    {
+      "source": "03-final-project-rar",
+      "original_path": "03Hazard Detection/sources_1/new/Reg.v",
+      "path": "sources/03-final-project-rar/hazard/rtl/Reg.v",
+      "bytes": 12620,
+      "sha256": "0a8274ff7d5607a9a69794bb3e9faa6bc56ccd37ba03cff353d3d0d39f27e547"
+    },
+    {
+      "source": "04-final-project",
+      "original_path": "FInal project.srcs/sim_1/new/final_tb.v",
+      "path": "sources/04-final-project/tb/final_tb.v",
+      "bytes": 1385,
+      "sha256": "0fdfab6398642aa2c8bffe5192637c76630c2647289183f55ecfdd59d03d12aa"
+    },
+    {
+      "source": "04-final-project",
+      "original_path": "FInal project.srcs/sources_1/new/Execution.v",
+      "path": "sources/04-final-project/rtl/Execution.v",
+      "bytes": 9267,
+      "sha256": "058d4db3f1ba8d4b2b331fae4e3b3d0c5a575f289e47ad9f00a9a9d54dabf982"
+    },
+    {
+      "source": "04-final-project",
+      "original_path": "FInal project.srcs/sources_1/new/Instruction_Decoding.v",
+      "path": "sources/04-final-project/rtl/Instruction_Decoding.v",
+      "bytes": 5258,
+      "sha256": "357c6ab3074e13dfcd7e864fa3d3164402df57d0bf1159c49fd5c0361900f52c"
+    },
+    {
+      "source": "04-final-project",
+      "original_path": "FInal project.srcs/sources_1/new/Instruction_Fetching.v",
+      "path": "sources/04-final-project/rtl/Instruction_Fetching.v",
+      "bytes": 940,
+      "sha256": "5ddbffd98ffff5eb2a76cca31f69e6643e8464e45e4d65235af71fd5454fd65f"
+    },
+    {
+      "source": "04-final-project",
+      "original_path": "FInal project.srcs/sources_1/new/Main.v",
+      "path": "sources/04-final-project/rtl/Main.v",
+      "bytes": 3553,
+      "sha256": "067a3cb89adc844a76fa9642681fcb17038daecdcbdb9bce5a93f59cf9864d8b"
+    },
+    {
+      "source": "04-final-project",
+      "original_path": "FInal project.srcs/sources_1/new/Memory_Access.v",
+      "path": "sources/04-final-project/rtl/Memory_Access.v",
+      "bytes": 2503,
+      "sha256": "1dcfdd1b5c28d1273b60fd89855b05b035c8c088d22d9c35898c5ccd52460b68"
+    },
+    {
+      "source": "04-final-project",
+      "original_path": "FInal project.srcs/sources_1/new/Write_Back.v",
+      "path": "sources/04-final-project/rtl/Write_Back.v",
+      "bytes": 3196,
+      "sha256": "9685fcc4cdca37fa3c30e8975737ed2d370e3111c51ccdbd68c1359202919720"
+    }
+  ],
+  "excluded": [
+    {
+      "source": "02-final-pj",
+      "path": "CPU_Hazard detect_0105/CPU_Hazard detection/CPU_Hazard detection/final110/final110.sim/sim_1/behav/xsim/glbl.v",
+      "reason": "Xilinx-generated simulation global module"
+    },
+    {
+      "source": "02-final-pj",
+      "path": "CPU_pipeline_0105/CPU_pipeline/CPU_pipeline/CPU_PIPELINE.sim/sim_1/behav/xsim/glbl.v",
+      "reason": "Xilinx-generated simulation global module"
+    },
+    {
+      "source": "02-final-pj",
+      "path": "CPU_Single_cycle_0105/CPU_Single cycle/CPU_Single cycle/final/CPU_SingleCycle/CPU_SingleCycle.sim/sim_1/behav/xsim/glbl.v",
+      "reason": "Xilinx-generated simulation global module"
+    },
+    {
+      "source": "04-final-project",
+      "path": "FInal project.sim/sim_1/behav/xsim/glbl.v",
+      "reason": "Xilinx-generated simulation global module"
+    }
+  ],
+  "zip_duplicate_checks": [
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/ALUcontrol.v",
+      "same_as_extracted_file": true,
+      "sha256": "dfcb3f449fb3f27ad852d758951ebfbb6faba52562a473cbb3ebad5d8d5fcd83"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/DataMem.v",
+      "same_as_extracted_file": true,
+      "sha256": "5696651840a589768a2de960ee554a62819b36b6c1c34b3d9b4f88cd38b374d8"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/EX.v",
+      "same_as_extracted_file": true,
+      "sha256": "67fb5b53e42c27ae57e7f21874aecacc37f7f810435e143fac0fd1687b08e1ae"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/finaltb.v",
+      "same_as_extracted_file": true,
+      "sha256": "7981df3e1e273eb7a8faac97721a15c76c68b6cda07dabe0a9c343d020e347c8"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/ID.v",
+      "same_as_extracted_file": true,
+      "sha256": "559e3a92c54a04c325bb0f547d18e2c17e091dd4d20dc6f3f6973b6b48356108"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/IF.v",
+      "same_as_extracted_file": true,
+      "sha256": "7125a355408cfb5094c4c34cc8306d572ed451dd04c0ce4a91a0e696d797b916"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/mark.v",
+      "same_as_extracted_file": true,
+      "sha256": "3e09274f98975fd12ab268ac327d714cd85c969b5839c5aff7f835962a2f308f"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/MarkLoveGarry.v",
+      "same_as_extracted_file": true,
+      "sha256": "fe669a8b761dc78f1bafd80a39148b96133fd964b44e19c4563c20ce0b4c28c6"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/MEM.v",
+      "same_as_extracted_file": true,
+      "sha256": "b00c3fed4101c5517d7593bf6b39d399f1ca585015620895b438a386389d579f"
+    },
+    {
+      "archive": "COMPUTER program FINAL.zip",
+      "member": "Final/WB.v",
+      "same_as_extracted_file": true,
+      "sha256": "1236edafb6b29199a919fb60803d3c5f7bdf41a213836f48bff167414a7c6b8f"
+    }
+  ],
+  "duplicate_content_groups": [
+    [
+      "sources/02-final-pj/hazard/rtl/ALU_Controller.v",
+      "sources/02-final-pj/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/02-final-pj/single-cycle/rtl/ALU_Controller.v"
+    ],
+    [
+      "sources/02-final-pj/hazard/rtl/DataMemory.v",
+      "sources/02-final-pj/pipeline/rtl/DATAMEMORY.v",
+      "sources/02-final-pj/single-cycle/rtl/DataMemory.v"
+    ],
+    [
+      "sources/02-final-pj/hazard/rtl/Mux_32Bits.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_32BITS.v",
+      "sources/02-final-pj/single-cycle/rtl/Mux_32Bits.v"
+    ],
+    [
+      "sources/02-final-pj/hazard/rtl/Mux_5Bits.v",
+      "sources/02-final-pj/pipeline/rtl/MUX_5BITS.v",
+      "sources/02-final-pj/single-cycle/rtl/Mux_5Bits.v"
+    ],
+    [
+      "sources/02-final-pj/hazard/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v"
+    ],
+    [
+      "sources/02-final-pj/pipeline/rtl/ADD.v",
+      "sources/02-final-pj/single-cycle/rtl/Add.v"
+    ],
+    [
+      "sources/02-final-pj/pipeline/rtl/PC.v",
+      "sources/02-final-pj/single-cycle/rtl/PC.v"
+    ],
+    [
+      "sources/02-final-pj/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/02-final-pj/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v"
+    ],
+    [
+      "sources/02-final-pj/pipeline/rtl/SIGN_EXTEND.v",
+      "sources/02-final-pj/single-cycle/rtl/Sign_Extend.v"
+    ],
+    [
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v"
+    ],
+    [
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v"
+    ]
+  ]
+}

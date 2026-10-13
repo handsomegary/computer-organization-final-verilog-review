@@ -1,0 +1,16 @@
+{
+  "case_count": 38,
+  "elaboration": {
+    "COMPILE_FAILED": 5,
+    "ELABORATED": 33
+  },
+  "functional": {
+    "NOT_RUN": 7,
+    "SMOKE_ONLY_NO_ASSERTIONS": 4,
+    "FAIL": 17,
+    "PASS": 10
+  },
+  "assertions_explanation": "Expected-original failures are still functional FAIL, not compliance passes. Compile failures overlap three distinct source defect categories.",
+  "tool": "Official Bleyer Windows package: Icarus Verilog 12.0 (devel), s20150603-1539-g2693dd32b. Final run had no environment crashes or timeouts.",
+  "source_sha256_verified": 115
+}
