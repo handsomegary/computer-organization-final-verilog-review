@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module IF_ID (PC_4_out, IM_out, PC_4, IM, CLK, RST);
 
 output reg [31:0] PC_4_out, IM_out;

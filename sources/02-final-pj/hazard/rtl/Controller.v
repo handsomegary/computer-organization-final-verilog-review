@@ -46,7 +46,7 @@ module Controller ( REGDST, ALUSRC, MEMTOREG, REGWRITE, MEMREAD, MEMWRITE, BRANC
 				MEMTOREG = 1'b1 ; 
 				REGWRITE = 1'b1 ;
 				MEMREAD = 1'b0 ;
-				MEMWRITE = 1'b1 ;
+				MEMWRITE = 1'b0 ;
 				BRANCH = 1'b0 ;
 				ALUOP = 2'b00 ;  
 			end 

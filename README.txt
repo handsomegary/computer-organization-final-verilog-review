@@ -1,53 +1,68 @@
-Computer Organization Final Project — Verilog 原始碼與檢查
+Computer Organization Final Project — 已修正版本
 
-從指定的四個資料夾擷取 115 個原始 .v 檔，保留原始位元組與檔名。
-第三個資料夾的 42 個 .v 位於 RAR 內，已取出。排除 4 個 Xilinx glbl.v、
-工程檔、編譯產物、波形、可執行檔與原有簡報／報告。來源一的 ZIP 內
-10 個 .v 與外層檔案完全相同，未再重複保存。
+本 repo 現在包含可通過驗證的五個修正版，以及重新撰寫的 A／B／C 參考實作。
+四份來源的初始擷取版保存在 Git commit 21d436e；目前檔案樹已移除需要大幅
+重作的舊設計，不再把已知損壞版本當成可用範例。
 
-來源與目錄
+建議先使用新寫的版本
 
-sources/01-computer-program-final/       10 檔，COMPUTER program FINAL
-sources/02-final-pj/single-cycle/        15 檔，final_pj 單週期
-sources/02-final-pj/pipeline/            19 檔，final_pj 管線
-sources/02-final-pj/hazard/              22 檔，final_pj hazard
-sources/03-final-project-rar/single-cycle/ 15 檔，計組final project RAR
-sources/03-final-project-rar/pipeline/    19 檔，同上
-sources/03-final-project-rar/hazard/       8 檔，同上
-sources/04-final-project/                7 檔，FInal project
+reference/rtl/mips_single_cycle.v
+    Level A：module mips_single_cycle，單週期。
+reference/rtl/mips_pipeline.v
+    Level B：module mips_pipeline，參數 HAZARD_ENABLE=0。
+    Level C：同一個五階段 module，HAZARD_ENABLE=1（預設）。
+    B 版需要對 RAW 相依指令插入 NOP；C 版自動 forwarding 與 load-use stall。
 
-各目錄是獨立設計，具有相同名稱的 module，請分開編譯。
-01 的兩個空殼 .v 也原樣保留，因為它們屬於來源，並在報告標示衝突。
+新版本介面：clk、reset（active high）、pc；管線版另外提供 stall。
+內含 regs[0:31]、imem[0:1023]、dmem[0:1023]，PC 與資料位址皆以 byte 計。
+imem[n]／dmem[n] 對應 byte address 4*n。內建 ROM 使用全部十種指令，
+完成後 r8=24、r9=7、dmem[100]=24（byte address 400）。
 
-檢查結論
+保留原架構並修正的版本
 
-四份來源均未完全符合指定簡報。02、03 的單週期版涵蓋全部十種指令，
-但 addi 會誤寫資料記憶體。Pipeline／hazard 版本有 jump 缺漏、
-分支或 forwarding 缺陷。01、04 另有頂層編譯問題。
-本次保留原始碼，沒有替換或修正這些設計。
+sources/02-final-pj/single-cycle/         Level A
+sources/02-final-pj/pipeline/             Level B，RAW 相依間排程 3 個 NOP
+sources/02-final-pj/hazard/               Level C，無需相依 NOP
+sources/03-final-project-rar/single-cycle/ Level A
+sources/03-final-project-rar/pipeline/    Level B，RAW 相依間排程 3 個 NOP
 
-檢查依據為使用者指定的「計算機組織FinalProject.pptx」第 2–9 頁。
-該簡報截止日為 2019/1/15，只能確認這份題目，無法證明每年都相同。
+保留原有 module 名稱、top 介面與 stage-register 架構。這些專案具有重複
+module 名稱，請分開編譯。各自 tb/ 內現在都有會 assert 結果並正常結束的 TB。
+修正內容包括 addi、byte addressing、$zero、jump、branch flush 與 C 版的
+store forwarding／load-use。詳細差異與移除理由見 AUDIT.zh-TW.txt。
 
-文件與驗證
+依指定簡報實作的 ISA
 
-AUDIT.zh-TW.txt          各版本判定、主要問題、需求及驗證範圍
-source-manifest.json     每一檔的來源對照、SHA-256、排除與重複項目
-reports/                詳細靜態檢查、實際測試結果與工具診斷
-verification/           新增的自動檢查 testbench、案例清單及執行器
+lw sw add addi sub and or slt beq j
+signed slt、16-bit sign extension、32-bit wraparound 算術、PC+4、標準 branch／
+jump 位址、無 branch delay slot。支援範圍是作業的十種指令，沒有實作完整
+MIPS32 的例外／溢位處理。不對齊或超出記憶體的 lw 回傳 0、sw 不產生作用。
 
-verification 裡的 .v 是本次新增的檢查，不計入 115 個原始檔。
-測試失敗表示原始設計未通過該項功能，並非以「預期失敗」當作符合。
-原有 PDF 與簡報依要求不納入 repo，所以此處不是完整作業繳交壓縮包。
+重跑全部驗證：Python 3 + Icarus Verilog
 
-重跑檢查（Python 3 + Icarus Verilog）
+python verification/check_all.py
 
-python verification/run_checks.py
+工具未在 PATH 時：
+python verification/check_all.py --iverilog C:/path/bin/iverilog.exe --vvp C:/path/bin/vvp.exe
+可攜套件若需要指定函式庫，另加 --iverilog-base C:/path/lib/ivl。
+結果預設放在 .verification-build/，任何編譯或功能失敗都回傳非零。
 
-若工具未在 PATH：
-python verification/run_checks.py --iverilog C:/path/bin/iverilog.exe --vvp C:/path/bin/vvp.exe
+最終結果：173／173 通過
+    38 個保留專案回歸案例。
+    97 個新版本驗證（獨立 MIPS 模型、12 個定向程式、20 個固定 seed 隨機程式，
+       分別檢查 A、B、C，另含內建 ROM 與 reset）。
+    22 個舊 pipeline 的 ISA／隨機／控制清除比對。
+    16 個獨立 reset、forwarding、load/store、branch、$zero 與記憶體壓力案例。
+隨機與整合比對涵蓋全部 32 個暫存器及完整資料記憶體，不以「預期失敗」算通過。
 
-結果預設寫入 .verification-build/results.json。可加 --case 案例名稱只執行一項。
-執行器會先驗證全部 115 個原始檔 SHA-256。存在功能／編譯失敗時會回傳非零。
-最終 38 個案例中，27 個 assertion 測試有 10 通過、17 失敗，另確認 3 類
-原始碼編譯問題。請參閱 reports 的完整結果，勿將 testbench 能結束視為完整符合。
+reports/summary.json                    四組套件的總結果
+reports/verification-results.json       保留專案回歸紀錄
+reports/reference-results.json          新版本獨立模型與逐案例結果
+reports/pipeline-results.json           保留 pipeline 比對結果
+reports/stress-results.json             獨立壓力測試
+reports/changes.json                    修正、移除及替換對照
+source-manifest.json                    目前所有 .v 的 SHA-256 與原始來源對照
+
+未搬動或修改 Downloads 的原檔。舊碼仍可從初始 commit 找回。
+本次交付為 RTL、testbench 與驗證說明；未另製作課程要求的個人／小組 PDF，
+也未進行 FPGA synthesis、timing closure 或實體板驗證。

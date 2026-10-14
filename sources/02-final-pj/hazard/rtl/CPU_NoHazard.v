@@ -14,7 +14,14 @@ module CPU_NoHazard (PC_NEXT,READ_DATA_1,READ_DATA_2,READ_DATA_1_ID_EX, READ_DAT
 	wire [1:0]ALUOP ; // 2bits 
 	wire REGDST, ALUSRC, MEMTOREG, REGWRITE, MEMREAD, MEMWRITE, BRANCH, ZERO, branch_select ;  // 1bits
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+// Keep the original five-stage datapath and register boundaries.
+    // beq resolves in MEM: squash all three younger instructions.
+    // j resolves in ID: squash only the instruction in IF. Older beq wins.
+    wire jump_select;
+    wire [31:0] jump_target;
+    assign jump_select = (INSTRUCTION_IF_ID[31:26] == 6'b000010);
+    assign jump_target = {PC_4_IFID_out[31:28], INSTRUCTION_IF_ID[25:0], 2'b00};
+    wire redirect = branch_select | jump_select;
 
 	wire [31:0]INSTRUCTION_IF_ID, PC_4_IFID_out ;
 
@@ -34,7 +41,7 @@ module CPU_NoHazard (PC_NEXT,READ_DATA_1,READ_DATA_2,READ_DATA_1_ID_EX, READ_DAT
 
 
 	wire PCWrite ;
-	PC Program_Counter(.PC_OUT(PC_NEXT), .PC_IN(PC_IN), .PCWrite(PCWrite), .CLK(CLK), .RST(RST));
+	PC Program_Counter(.PC_OUT(PC_NEXT), .PC_IN(PC_IN), .PCWrite(PCWrite | redirect), .CLK(CLK), .RST(RST));
 	InstructionMemory IM(.INSTRUCTION(INSTRUCTION), .ADDR(PC_NEXT), .RST(RST)) ;
 
 	wire [31:0]constant  ;
@@ -43,7 +50,7 @@ module CPU_NoHazard (PC_NEXT,READ_DATA_1,READ_DATA_2,READ_DATA_1_ID_EX, READ_DAT
 	Add Add_1(.OUT(PC_4), .IN0(PC_NEXT), .IN1(constant) ) ;
 
 	wire IF_ID_WRTIE ;
-	IF_ID IF_ID_Reg(.PC_4_out(PC_4_IFID_out), .IM_out(INSTRUCTION_IF_ID), .PC_4(PC_4), .IM(INSTRUCTION), .IF_ID_WRTIE(IF_ID_WRTIE), .CLK(CLK), .RST(RST));
+	IF_ID IF_ID_Reg(.PC_4_out(PC_4_IFID_out), .IM_out(INSTRUCTION_IF_ID), .PC_4(PC_4), .IM(redirect ? 32'b0 : INSTRUCTION), .IF_ID_WRTIE(IF_ID_WRTIE | redirect), .CLK(CLK), .RST(RST));
 
 	wire CTRL_SEL ; 
 	Controller CTLER( .REGDST(REGDST), .ALUSRC(ALUSRC), .MEMTOREG(MEMTOREG), .REGWRITE(REGWRITE), 
@@ -59,7 +66,7 @@ module CPU_NoHazard (PC_NEXT,READ_DATA_1,READ_DATA_2,READ_DATA_1_ID_EX, READ_DAT
 	ID_EX ID_EX_Reg(.REGWRITE_out(REGWRITE_ID_EX), .MEMTOREG_out(MEMTOREG_ID_EX), .BRANCH_out(BRANCH_ID_EX), .MEMREAD_out(MEMREAD_ID_EX),
 	 .MEMWRITE_out(MEMWRITE_ID_EX), .ALUSRC_out(ALUSRC_ID_EX), .REGDST_out(REGDST_ID_EX), .ALUOP_out(ALUOP_ID_EX), 
 	 .PC_4_out(PC_4_IDEX_out), .ReadData_1_out(READ_DATA_1_ID_EX), .ReadData_2_out(READ_DATA_2_ID_EX), .Signextend_Reg(SE_ID_EX), .RD_out(RD_ID_EX), .RT_out(RT_ID_EX), .RS_out(RS_ID_EX),
-	.REGWRITE(REGWRITE), .MEMTOREG(MEMTOREG), .BRANCH(BRANCH), .MEMREAD(MEMREAD), .MEMWRITE(MEMWRITE), .REGDST(REGDST), .ALUSRC(ALUSRC), .ALUOP(ALUOP), 
+	.REGWRITE(REGWRITE & ~redirect), .MEMTOREG(MEMTOREG & ~redirect), .BRANCH(BRANCH & ~redirect), .MEMREAD(MEMREAD & ~redirect), .MEMWRITE(MEMWRITE & ~redirect), .REGDST(REGDST & ~redirect), .ALUSRC(ALUSRC & ~redirect), .ALUOP(ALUOP), 
 	.PC_4(PC_4_IFID_out), .READ_DATA_1(READ_DATA_1), .READ_DATA_2(READ_DATA_2), .SE_REG(Signextend_Out), 
 	.RD(INSTRUCTION_IF_ID[15:11]), .RT(INSTRUCTION_IF_ID[20:16]), .RS(INSTRUCTION_IF_ID[25:21]), .CLK(CLK), .RST(RST) );
 
@@ -81,12 +88,12 @@ module CPU_NoHazard (PC_NEXT,READ_DATA_1,READ_DATA_2,READ_DATA_1_ID_EX, READ_DAT
 	ALU ALU_1(.OUT(ALU_result), .ZERO(ZERO), .IN0(ALU_Input0), .IN1(ALU_Input1), .ALU_CONTROL(ALU_Ctrl) ) ; 
 
 
-	ForwardingUnit FWUnit(.FORWARDA(FORWARDA), .FORWARDB(FORWARDB), .RS_in(RS_ID_EX) , .RT_in(RT_ID_EX), .RD_EX_MEM(WRITE_ADDR_EX_MEM), .RD_MEM_WB(Write_Addr_Mem_WB), .REGWRITE_EX_MEM(REGWRITE_EX_MEM), .REGWRITE_MEM_WB(REGWRITE_MEM_WB) );   
+	ForwardingUnit FWUnit(.FORWARDA(FORWARDA), .FORWARDB(FORWARDB), .RS_in(RS_ID_EX) , .RT_in(RT_ID_EX), .RD_EX_MEM(WRITE_ADDR_EX_MEM), .RD_MEM_WB(Write_Addr_Mem_WB), .REGWRITE_EX_MEM(REGWRITE_EX_MEM & ~MEMREAD_EX_MEM), .REGWRITE_MEM_WB(REGWRITE_MEM_WB) );   
 	
 	EX_MEM EX_MEM_Reg(.REGWRITE_out(REGWRITE_EX_MEM), .MEMTOREG_out(MEMTOREG_EX_MEM), .BRANCH_out(BRANCH_EX_MEM), .MEMREAD_out(MEMREAD_EX_MEM), .MEMWRITE_out(MEMWRITE_EX_MEM),
 	.ADD_RESULT_out(ADD_RESULT_EX_MEM), .ALU_RESULT_out(ALU_RESULT_EX_MEM), .READ_DATA_2_out(READ_DATA_2_EX_MEM), .WRITE_ADDR_out(WRITE_ADDR_EX_MEM), .ZERO_out(ZERO_EX_MEM),
-	.CLK(CLK), .RST(RST), .REGWRITE(REGWRITE_ID_EX), .MEMTOREG(MEMTOREG_ID_EX), .BRANCH(BRANCH_ID_EX), .MEMREAD(MEMREAD_ID_EX), .MEMWRITE(MEMWRITE_ID_EX),
-	.ADD_RESULT(PC_Branch), .ALU_RESULT(ALU_result), .READ_DATA_2(READ_DATA_2_ID_EX), .WRITE_ADDR(WRITE_ADDR), .ZERO(ZERO));
+	.CLK(CLK), .RST(RST), .REGWRITE(REGWRITE_ID_EX & ~branch_select), .MEMTOREG(MEMTOREG_ID_EX & ~branch_select), .BRANCH(BRANCH_ID_EX & ~branch_select), .MEMREAD(MEMREAD_ID_EX & ~branch_select), .MEMWRITE(MEMWRITE_ID_EX & ~branch_select),
+	.ADD_RESULT(PC_Branch), .ALU_RESULT(ALU_result), .READ_DATA_2(Mux32_1_IN0), .WRITE_ADDR(WRITE_ADDR), .ZERO(ZERO));
 
 
 	and and1(branch_select, BRANCH_EX_MEM, ZERO_EX_MEM) ;
@@ -100,9 +107,19 @@ module CPU_NoHazard (PC_NEXT,READ_DATA_1,READ_DATA_2,READ_DATA_1_ID_EX, READ_DAT
 
 	Mux_32Bits Mux32_2(.OUT(WRITE_DATA), .IN0(DataMemory_Output_MEM_WB), .IN1(ALU_result_MEM_WB), .SEL(MemToReg_MEM_WB) ) ; 
 
-	Mux_32Bits Mux32_3(.OUT(PC_IN), .IN0(PC_4), .IN1(ADD_RESULT_EX_MEM), .SEL(branch_select) ) ;
+	// Branch has priority over a younger jump, including during a load-use stall.
+    assign PC_IN = branch_select ? ADD_RESULT_EX_MEM :
+                   jump_select ? jump_target : PC_4;
 
-	Hazard_detection_unit HDUnit(.PCWRITE(PCWrite), .IF_ID_WRITE(IF_ID_WRTIE), .CTRL_SEL(CTRL_SEL), 
-		.RS_IF_ID(INSTRUCTION_IF_ID[25:21]), .RT_IF_ID(INSTRUCTION_IF_ID[20:16]), .RT_ID_EX(RT_ID_EX), .MEMREAD_ID_EX(MEMREAD_ID_EX) );
+	wire uses_rs = (INSTRUCTION_IF_ID[31:26] == 6'b000000) |
+                   (INSTRUCTION_IF_ID[31:26] == 6'b001000) |
+                   (INSTRUCTION_IF_ID[31:26] == 6'b100011) |
+                   (INSTRUCTION_IF_ID[31:26] == 6'b101011) |
+                   (INSTRUCTION_IF_ID[31:26] == 6'b000100);
+    wire uses_rt = (INSTRUCTION_IF_ID[31:26] == 6'b000000) |
+                   (INSTRUCTION_IF_ID[31:26] == 6'b101011) |
+                   (INSTRUCTION_IF_ID[31:26] == 6'b000100);
+    Hazard_detection_unit HDUnit(.PCWRITE(PCWrite), .IF_ID_WRITE(IF_ID_WRTIE), .CTRL_SEL(CTRL_SEL), 
+		.RS_IF_ID(uses_rs ? INSTRUCTION_IF_ID[25:21] : 5'd0), .RT_IF_ID(uses_rt ? INSTRUCTION_IF_ID[20:16] : 5'd0), .RT_ID_EX(RT_ID_EX), .MEMREAD_ID_EX(MEMREAD_ID_EX) );
 
 endmodule 

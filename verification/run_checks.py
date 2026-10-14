@@ -1,6 +1,6 @@
-"""Reproduce the archived Verilog checks. Requires Python 3 and Icarus Verilog.
+"""Check the repaired Verilog projects. Requires Python 3 and Icarus Verilog.
 
-No archived source is edited. Output goes to .verification-build by default.
+No source is edited by this runner. Output goes to .verification-build by default.
 Nonzero compile statuses and all diagnostics are always retained in results.json.
 """
 import argparse
@@ -51,7 +51,7 @@ def main():
     altered = [r['path'] for r in manifest['files'] if not (ROOT/r['path']).is_file() or
                hashlib.sha256((ROOT/r['path']).read_bytes()).hexdigest() != r['sha256']]
     if altered:
-        raise SystemExit('Archived sources differ from original SHA-256: ' + ', '.join(altered))
+        raise SystemExit('Current sources differ from recorded SHA-256: ' + ', '.join(altered))
     cases = json.loads((ROOT/'verification/cases.json').read_text(encoding='utf-8'))
     results = []
     for case in cases:
@@ -98,7 +98,7 @@ def main():
                 row['functional_status'] = 'NO_ASSERTION_RESULT'
         results.append(row)
         print(row['id'], compiled, row['functional_status'], flush=True)
-    report = {'archived_sha256_verified': len(manifest['files']), 'sources_altered': altered,
+    report = {'current_sha256_verified': len(manifest['files']), 'sources_altered': altered,
               'tool': command([iv, '-V'], 15), 'cases': results}
     (out/'results.json').write_text(json.dumps(report, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
     print('Results:', out/'results.json')

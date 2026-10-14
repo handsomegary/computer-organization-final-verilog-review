@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module ID_EX(REGWRITE_out, MEMTOREG_out, BRANCH_out, MEMREAD_out, MEMWRITE_out,ALUSRC_out, REGDST_out, ALUOP_out, 
 	PC_4_out, ReadData_1_out, ReadData_2_out, Signextend_Reg, RD_out, RT_out, RS_out,
 	REGWRITE, MEMTOREG, BRANCH, MEMREAD, MEMWRITE, REGDST, ALUSRC, ALUOP, 

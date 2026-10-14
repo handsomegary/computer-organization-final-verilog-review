@@ -1,50 +1,27 @@
 `timescale 1ns / 1ps
-
+// Self-checking demo. Compile this project independently: module names overlap.
 module CPU_Pipeline_tb;
-
-	// Inputs
-	reg CLK;
-	reg RST;
-
-	// Outputs
-	wire [31:0] PC_NEXT,PC_4, PC_4_IFID_out,PC_4_IDEX_out,ReadData_1_out, ReadData_2_out,Signextend_out,SE_Reg_Out,ALU_result,WRITE_DATA;
-    wire [4:0]Write_Addr_Mem_WB;
-	// Instantiate the Unit Under Test (UUT)
-	CPU_Pipeline uut (
-		.PC_NEXT(PC_NEXT), 
-		.PC_4(PC_4),
-		.PC_4_IFID_out(PC_4_IFID_out),
-		.Signextend_out(Signextend_out),
-		.ALU_result(ALU_result),
-		.WRITE_DATA(WRITE_DATA),
-		.CLK(CLK), 
-		.RST(RST),
-		.PC_4_IDEX_out(PC_4_IDEX_out),
-		.READ_DATA_1_ID_EX(ReadData_1_out),
-		.READ_DATA_2_ID_EX(ReadData_2_out),
-		.Signextend_Reg(SE_Reg_Out),
-		.Write_Addr_Mem_WB(Write_Addr_Mem_WB)
-	);
-
-	initial begin
-		CLK = 1'b0 ;
-		forever #2 CLK = ~CLK ;
-	end 
-
-	initial begin
-		// Initialize Inputs
-		RST = 1'b0;
-
-		// Wait 100 ns for global reset to finish
-		#100;
-        
-		// Add stimulus here
-		RST = 1'b1;
-		#15 RST = 1'b0 ;
-
-		#300 $finish ;
-		
-	end
-      
+  reg CLK=0, RST=0;
+  always #5 CLK=~CLK;
+  CPU_Pipeline uut(.CLK(CLK), .RST(RST));
+  task check_reg;
+    input integer addr;
+    input [31:0] expected;
+    begin
+      if (uut.RF.Regfile[addr] !== expected)
+        $fatal(1, "register %0d: got %h expected %h", addr, uut.RF.Regfile[addr], expected);
+    end
+  endtask
+  initial begin
+    #1 RST=1; #11 RST=0;
+    repeat (180) @(negedge CLK);
+    check_reg(0,0); check_reg(1,400); check_reg(2,7); check_reg(3,7);
+    check_reg(4,14); check_reg(5,32'hffffffff); check_reg(6,32'hfffffff8);
+    check_reg(7,6); check_reg(8,7); check_reg(9,1); check_reg(10,0);
+    check_reg(11,0); check_reg(12,396);
+    if (uut.DM.memory[100] !== 7 || uut.DM.memory[101] !== 0 || uut.DM.memory[102] !== 396)
+      $fatal(1, "demo memory/store/flush mismatch");
+    $display("PASS 02-final-pj/pipeline all ten instructions and demo state");
+    $finish;
+  end
 endmodule
-

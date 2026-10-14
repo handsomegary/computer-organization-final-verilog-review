@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module PC(PC_OUT, PC_IN, PCWrite, CLK, RST);
 output reg [31:0] PC_OUT;
 input [31:0] PC_IN;

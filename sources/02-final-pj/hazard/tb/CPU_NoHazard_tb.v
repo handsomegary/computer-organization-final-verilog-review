@@ -1,54 +1,27 @@
 `timescale 1ns / 1ps
-
+// Self-checking demo. Compile this project independently: module names overlap.
 module CPU_NoHazard_tb;
-
-	// Inputs
-	reg CLK;
-	reg RST;
-	// Outputs
-	wire [31:0]PC_NEXT,READ_DATA_1,READ_DATA_2,READ_DATA_1_ID_EX, READ_DATA_2_ID_EX, ALU_Input0, ALU_Input1,ALU_RESULT_EX_MEM,ALU_result_MEM_WB, WRITE_DATA;
-	wire [1:0] FORWARDA, FORWARDB;
-	wire [4:0]WRITE_ADDR, WRITE_ADDR_EX_MEM,Write_Addr_Mem_WB ;
-
-
-	// Instantiate the Unit Under Test (UUT)
-	CPU_NoHazard uut (
-		.PC_NEXT(PC_NEXT), 
-		.READ_DATA_1(READ_DATA_1),
-		.READ_DATA_2(READ_DATA_2),
-		.READ_DATA_1_ID_EX(READ_DATA_1_ID_EX),
-		.READ_DATA_2_ID_EX(READ_DATA_2_ID_EX),
-		.ALU_Input0(ALU_Input0),
-		.ALU_Input1(ALU_Input1),
-		.ALU_RESULT_EX_MEM(ALU_RESULT_EX_MEM),
-		.ALU_result_MEM_WB(ALU_result_MEM_WB),
-		.WRITE_DATA(WRITE_DATA),
-		.FORWARDA(FORWARDA),
-		.FORWARDB(FORWARDB),
-		.WRITE_ADDR(WRITE_ADDR),
-		.WRITE_ADDR_EX_MEM(WRITE_ADDR_EX_MEM),
-		.Write_Addr_Mem_WB(Write_Addr_Mem_WB),
-		.CLK(CLK), 
-		.RST(RST)
-	);
-
-	initial begin
-		CLK = 1'b0 ;
-		forever #10 CLK = ~CLK ;
-	end 
-
-	initial begin
-		// Initialize Inputs
-		RST = 1'b0;
-
-		// Wait 100 ns for global reset to finish
-		#100;
-        
-		// Add stimulus here
-		RST = 1'b1;
-		#15 RST = 1'b0 ;
-		
-	end
-      
+  reg CLK=0, RST=0;
+  always #5 CLK=~CLK;
+  CPU_NoHazard uut(.CLK(CLK), .RST(RST));
+  task check_reg;
+    input integer addr;
+    input [31:0] expected;
+    begin
+      if (uut.RF.Regfile[addr] !== expected)
+        $fatal(1, "register %0d: got %h expected %h", addr, uut.RF.Regfile[addr], expected);
+    end
+  endtask
+  initial begin
+    #1 RST=1; #11 RST=0;
+    repeat (180) @(negedge CLK);
+    check_reg(0,0); check_reg(1,400); check_reg(2,7); check_reg(3,7);
+    check_reg(4,14); check_reg(5,32'hffffffff); check_reg(6,32'hfffffff8);
+    check_reg(7,6); check_reg(8,7); check_reg(9,1); check_reg(10,0);
+    check_reg(11,0); check_reg(12,396);
+    if (uut.DM.memory[100] !== 7 || uut.DM.memory[101] !== 0 || uut.DM.memory[102] !== 396)
+      $fatal(1, "demo memory/store/flush mismatch");
+    $display("PASS 02-final-pj/hazard all ten instructions and demo state");
+    $finish;
+  end
 endmodule
-

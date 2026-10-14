@@ -1,5 +1,5 @@
 {
-  "archived_sha256_verified": 115,
+  "current_sha256_verified": 124,
   "sources_altered": [],
   "tool": {
     "returncode": 0,
@@ -9,102 +9,8 @@
   },
   "cases": [
     {
-      "id": "original-s01-all-files",
-      "kind": "original_top",
-      "top": "finaltb",
-      "files": [
-        "sources/01-computer-program-final/ALUcontrol.v",
-        "sources/01-computer-program-final/DataMem.v",
-        "sources/01-computer-program-final/EX.v",
-        "sources/01-computer-program-final/ID.v",
-        "sources/01-computer-program-final/IF.v",
-        "sources/01-computer-program-final/MEM.v",
-        "sources/01-computer-program-final/MarkLoveGarry.v",
-        "sources/01-computer-program-final/WB.v",
-        "sources/01-computer-program-final/finaltb.v",
-        "sources/01-computer-program-final/mark.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "finaltb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s01-all-files.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/01-computer-program-final/ALUcontrol.v",
-        "sources/01-computer-program-final/DataMem.v",
-        "sources/01-computer-program-final/EX.v",
-        "sources/01-computer-program-final/ID.v",
-        "sources/01-computer-program-final/IF.v",
-        "sources/01-computer-program-final/MEM.v",
-        "sources/01-computer-program-final/MarkLoveGarry.v",
-        "sources/01-computer-program-final/WB.v",
-        "sources/01-computer-program-final/finaltb.v",
-        "sources/01-computer-program-final/mark.v"
-      ],
-      "compile": {
-        "returncode": 4,
-        "stdout": "",
-        "stderr": "sources/01-computer-program-final/EX.v:21: error: 'EX' has already been declared in this scope.\r\nsources/01-computer-program-final/ALUcontrol.v:21:      : It was declared here as a module.\r\nsources/01-computer-program-final/EX.v:107: Module EX was already declared here: sources/01-computer-program-final/ALUcontrol.v:21\r\n\r\nsources/01-computer-program-final/MEM.v:21: error: 'MEM' has already been declared in this scope.\r\nsources/01-computer-program-final/DataMem.v:21:      : It was declared here as a module.\r\nsources/01-computer-program-final/MEM.v:100: Module MEM was already declared here: sources/01-computer-program-final/DataMem.v:21\r\n\r\n",
-        "timeout": false
-      },
-      "elaboration_status": "COMPILE_FAILED",
-      "environment_warning": false,
-      "artifact_generated": false,
-      "simulation": null,
-      "functional_status": "NOT_RUN",
-      "assertions": []
-    },
-    {
-      "id": "original-s01-selected-rtl",
-      "kind": "original_top",
-      "top": "finaltb",
-      "files": [
-        "sources/01-computer-program-final/EX.v",
-        "sources/01-computer-program-final/ID.v",
-        "sources/01-computer-program-final/IF.v",
-        "sources/01-computer-program-final/MEM.v",
-        "sources/01-computer-program-final/WB.v",
-        "sources/01-computer-program-final/MarkLoveGarry.v",
-        "sources/01-computer-program-final/finaltb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "finaltb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s01-selected-rtl.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/01-computer-program-final/EX.v",
-        "sources/01-computer-program-final/ID.v",
-        "sources/01-computer-program-final/IF.v",
-        "sources/01-computer-program-final/MEM.v",
-        "sources/01-computer-program-final/WB.v",
-        "sources/01-computer-program-final/MarkLoveGarry.v",
-        "sources/01-computer-program-final/finaltb.v"
-      ],
-      "compile": {
-        "returncode": 0,
-        "stdout": "",
-        "stderr": "",
-        "timeout": false
-      },
-      "elaboration_status": "ELABORATED",
-      "environment_warning": false,
-      "artifact_generated": true,
-      "simulation": null,
-      "functional_status": "NOT_RUN",
-      "assertions": []
-    },
-    {
-      "id": "original-s02-single-cycle",
-      "kind": "original_top",
+      "id": "repaired-demo-s02-single-cycle",
+      "kind": "directed",
       "top": "CPU_SingleCycle_tb",
       "files": [
         "sources/02-final-pj/single-cycle/rtl/ALU.v",
@@ -130,7 +36,7 @@
         "-s",
         "CPU_SingleCycle_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s02-single-cycle.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\repaired-demo-s02-single-cycle.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/single-cycle/rtl/ALU.v",
@@ -152,7 +58,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/single-cycle/rtl/Register_File.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -160,16 +66,18 @@
       "artifact_generated": true,
       "simulation": {
         "returncode": 0,
-        "stdout": "sources/02-final-pj/single-cycle/tb/SINGLE_CYCLE_TB.v:45: $finish called at 600000 (1ps)\r\n",
+        "stdout": "PASS single-cycle ROM: all ten instruction types, branch, jump, aligned sw/lw\r\nsources/02-final-pj/single-cycle/tb/SINGLE_CYCLE_TB.v:22: $finish called at 300000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "SMOKE_ONLY_NO_ASSERTIONS",
-      "assertions": []
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS single-cycle ROM: all ten instruction types, branch, jump, aligned sw/lw"
+      ]
     },
     {
-      "id": "original-s02-pipeline",
-      "kind": "original_top",
+      "id": "repaired-demo-s02-pipeline",
+      "kind": "directed",
       "top": "CPU_Pipeline_tb",
       "files": [
         "sources/02-final-pj/pipeline/rtl/ADD.v",
@@ -199,7 +107,7 @@
         "-s",
         "CPU_Pipeline_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s02-pipeline.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\repaired-demo-s02-pipeline.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/pipeline/rtl/ADD.v",
@@ -225,7 +133,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/pipeline/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/REGISTER_FILE.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -233,16 +141,18 @@
       "artifact_generated": true,
       "simulation": {
         "returncode": 0,
-        "stdout": "sources/02-final-pj/pipeline/tb/CPU_Pipeline_tb.v:45: $finish called at 415000 (1ps)\r\n",
+        "stdout": "PASS 02-final-pj/pipeline all ten instructions and demo state\r\nsources/02-final-pj/pipeline/tb/CPU_Pipeline_tb.v:25: $finish called at 1810000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "SMOKE_ONLY_NO_ASSERTIONS",
-      "assertions": []
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS 02-final-pj/pipeline all ten instructions and demo state"
+      ]
     },
     {
-      "id": "original-s02-hazard",
-      "kind": "original_top",
+      "id": "repaired-demo-s02-hazard",
+      "kind": "directed",
       "top": "CPU_NoHazard_tb",
       "files": [
         "sources/02-final-pj/hazard/rtl/ALU.v",
@@ -275,7 +185,7 @@
         "-s",
         "CPU_NoHazard_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s02-hazard.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\repaired-demo-s02-hazard.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/ALU.v",
@@ -304,19 +214,26 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/hazard/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/hazard/rtl/DataMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/hazard/rtl/InstructionMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/Register_file.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
-      "simulation": null,
-      "functional_status": "NOT_RUN",
-      "assertions": []
+      "simulation": {
+        "returncode": 0,
+        "stdout": "PASS 02-final-pj/hazard all ten instructions and demo state\r\nsources/02-final-pj/hazard/tb/CPU_NoHazard_tb.v:25: $finish called at 1810000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS 02-final-pj/hazard all ten instructions and demo state"
+      ]
     },
     {
-      "id": "original-s03-single-cycle",
-      "kind": "original_top",
+      "id": "repaired-demo-s03-single-cycle",
+      "kind": "directed",
       "top": "CPU_SingleCycle_tb",
       "files": [
         "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
@@ -342,7 +259,7 @@
         "-s",
         "CPU_SingleCycle_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s03-single-cycle.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\repaired-demo-s03-single-cycle.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
@@ -364,7 +281,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/03-final-project-rar/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/03-final-project-rar/single-cycle/rtl/Register_File.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "sources/03-final-project-rar/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -372,16 +289,18 @@
       "artifact_generated": true,
       "simulation": {
         "returncode": 0,
-        "stdout": "sources/03-final-project-rar/single-cycle/tb/SINGLE_CYCLE_TB.v:45: $finish called at 600000 (1ps)\r\n",
+        "stdout": "PASS single-cycle ROM: all ten instruction types, branch, jump, aligned sw/lw\r\nsources/03-final-project-rar/single-cycle/tb/SINGLE_CYCLE_TB.v:22: $finish called at 300000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "SMOKE_ONLY_NO_ASSERTIONS",
-      "assertions": []
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS single-cycle ROM: all ten instruction types, branch, jump, aligned sw/lw"
+      ]
     },
     {
-      "id": "original-s03-pipeline",
-      "kind": "original_top",
+      "id": "repaired-demo-s03-pipeline",
+      "kind": "directed",
       "top": "CPU_Pipeline_tb",
       "files": [
         "sources/03-final-project-rar/pipeline/rtl/ADD.v",
@@ -411,7 +330,7 @@
         "-s",
         "CPU_Pipeline_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s03-pipeline.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\repaired-demo-s03-pipeline.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/03-final-project-rar/pipeline/rtl/ADD.v",
@@ -437,135 +356,6 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/03-final-project-rar/pipeline/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/03-final-project-rar/pipeline/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/03-final-project-rar/pipeline/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/03-final-project-rar/pipeline/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\nsources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\n",
-        "timeout": false
-      },
-      "elaboration_status": "ELABORATED",
-      "environment_warning": false,
-      "artifact_generated": true,
-      "simulation": {
-        "returncode": 0,
-        "stdout": "sources/03-final-project-rar/pipeline/tb/CPU_Pipeline_tb.v:45: $finish called at 415000 (1ps)\r\n",
-        "stderr": "",
-        "timeout": false
-      },
-      "functional_status": "SMOKE_ONLY_NO_ASSERTIONS",
-      "assertions": []
-    },
-    {
-      "id": "original-s03-hazard",
-      "kind": "original_top",
-      "top": "TB",
-      "files": [
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "sources/03-final-project-rar/hazard/rtl/CPU.v",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-        "sources/03-final-project-rar/hazard/rtl/MUX.v",
-        "sources/03-final-project-rar/hazard/rtl/PC.v",
-        "sources/03-final-project-rar/hazard/rtl/Reg.v",
-        "sources/03-final-project-rar/hazard/tb/TB.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "TB",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s03-hazard.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "sources/03-final-project-rar/hazard/rtl/CPU.v",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-        "sources/03-final-project-rar/hazard/rtl/MUX.v",
-        "sources/03-final-project-rar/hazard/rtl/PC.v",
-        "sources/03-final-project-rar/hazard/rtl/Reg.v",
-        "sources/03-final-project-rar/hazard/tb/TB.v"
-      ],
-      "compile": {
-        "returncode": 9,
-        "stdout": "",
-        "stderr": "sources/03-final-project-rar/hazard/rtl/Reg.v:26: warning: Port declaration of ALUOp_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:26: error: Scalar port ``ALUOp_out'' has a vectored net declaration [1:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:22: warning: Port declaration of ID_EX_Rs inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:22: error: Scalar port ``ID_EX_Rs'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:21: warning: Port declaration of ID_EX_Rt inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:21: error: Scalar port ``ID_EX_Rt'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:29: warning: Port declaration of Instruction0_15_to_32_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:29: error: Scalar port ``Instruction0_15_to_32_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:28: warning: Port declaration of Instruction11_15_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:28: error: Scalar port ``Instruction11_15_out'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:27: warning: Port declaration of Instruction16_20_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:27: error: Scalar port ``Instruction16_20_out'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:31: warning: Port declaration of PC_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:31: error: Scalar port ``PC_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:34: warning: Port declaration of Read_Data1_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:34: error: Scalar port ``Read_Data1_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:35: warning: Port declaration of Read_Data2_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:35: error: Scalar port ``Read_Data2_out'' has a vectored net declaration [31:0].\r\n9 error(s) during elaboration.\r\n",
-        "timeout": false
-      },
-      "elaboration_status": "COMPILE_FAILED",
-      "environment_warning": false,
-      "artifact_generated": false,
-      "simulation": null,
-      "functional_status": "NOT_RUN",
-      "assertions": []
-    },
-    {
-      "id": "original-s04",
-      "kind": "original_top",
-      "top": "ha_tb",
-      "files": [
-        "sources/04-final-project/rtl/Execution.v",
-        "sources/04-final-project/rtl/Instruction_Decoding.v",
-        "sources/04-final-project/rtl/Instruction_Fetching.v",
-        "sources/04-final-project/rtl/Main.v",
-        "sources/04-final-project/rtl/Memory_Access.v",
-        "sources/04-final-project/rtl/Write_Back.v",
-        "sources/04-final-project/tb/final_tb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "ha_tb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\original-s04.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/04-final-project/rtl/Execution.v",
-        "sources/04-final-project/rtl/Instruction_Decoding.v",
-        "sources/04-final-project/rtl/Instruction_Fetching.v",
-        "sources/04-final-project/rtl/Main.v",
-        "sources/04-final-project/rtl/Memory_Access.v",
-        "sources/04-final-project/rtl/Write_Back.v",
-        "sources/04-final-project/tb/final_tb.v"
-      ],
-      "compile": {
-        "returncode": 2,
-        "stdout": "",
-        "stderr": "sources/04-final-project/rtl/Main.v:138: warning: implicit definition of wire 'Alu_result'.\r\nsources/04-final-project/rtl/Main.v:109: warning: Instantiating module ID with dangling input port 4 (Read_data_mem) floating.\r\nsources/04-final-project/rtl/Main.v:134: error: port ``Alu_result'' is not a port of uu3.\r\nsources/04-final-project/rtl/Main.v:148: error: port ``result'' is not a port of uu4.\r\nsources/04-final-project/rtl/Main.v:148: warning: Instantiating module MEM with dangling input port 3 (Alu_result) floating.\r\n2 error(s) during elaboration.\r\n",
-        "timeout": false
-      },
-      "elaboration_status": "COMPILE_FAILED",
-      "environment_warning": false,
-      "artifact_generated": false,
-      "simulation": null,
-      "functional_status": "NOT_RUN",
-      "assertions": []
-    },
-    {
-      "id": "rar_slt_tb",
-      "kind": "directed",
-      "top": "rar_slt_tb",
-      "files": [
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "verification/rar_slt_tb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "rar_slt_tb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\rar_slt_tb.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "verification/rar_slt_tb.v"
-      ],
-      "compile": {
-        "returncode": 0,
-        "stdout": "",
         "stderr": "",
         "timeout": false
       },
@@ -573,235 +363,15 @@
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "FAIL canonical slt 3<7: expected 00000001, got ffffffff\r\nFAIL signed slt -1<1: expected 00000001, got 00000000\r\nFAIL signed slt 1<-1: expected 00000000, got ffffffff\r\nFATAL: verification/rar_slt_tb.v:27: rar_slt_tb: 3 assertions failed\r\n       Time: 6000  Scope: rar_slt_tb\r\n",
+        "returncode": 0,
+        "stdout": "PASS 03-final-project-rar/pipeline all ten instructions and demo state\r\nsources/03-final-project-rar/pipeline/tb/CPU_Pipeline_tb.v:25: $finish called at 1810000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "FAIL canonical slt 3<7: expected 00000001, got ffffffff",
-        "FAIL signed slt -1<1: expected 00000001, got 00000000",
-        "FAIL signed slt 1<-1: expected 00000000, got ffffffff",
-        "FATAL: verification/rar_slt_tb.v:27: rar_slt_tb: 3 assertions failed"
+        "PASS 03-final-project-rar/pipeline all ten instructions and demo state"
       ]
-    },
-    {
-      "id": "rar_forwarding_tb",
-      "kind": "directed",
-      "top": "rar_forwarding_tb",
-      "files": [
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "sources/03-final-project-rar/hazard/rtl/CPU.v",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-        "sources/03-final-project-rar/hazard/rtl/MUX.v",
-        "sources/03-final-project-rar/hazard/rtl/PC.v",
-        "sources/03-final-project-rar/hazard/rtl/Reg.v",
-        "verification/rar_forwarding_tb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "rar_forwarding_tb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\rar_forwarding_tb.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "sources/03-final-project-rar/hazard/rtl/CPU.v",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-        "sources/03-final-project-rar/hazard/rtl/MUX.v",
-        "sources/03-final-project-rar/hazard/rtl/PC.v",
-        "sources/03-final-project-rar/hazard/rtl/Reg.v",
-        "verification/rar_forwarding_tb.v"
-      ],
-      "compile": {
-        "returncode": 9,
-        "stdout": "",
-        "stderr": "sources/03-final-project-rar/hazard/rtl/Reg.v:26: warning: Port declaration of ALUOp_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:26: error: Scalar port ``ALUOp_out'' has a vectored net declaration [1:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:22: warning: Port declaration of ID_EX_Rs inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:22: error: Scalar port ``ID_EX_Rs'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:21: warning: Port declaration of ID_EX_Rt inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:21: error: Scalar port ``ID_EX_Rt'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:29: warning: Port declaration of Instruction0_15_to_32_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:29: error: Scalar port ``Instruction0_15_to_32_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:28: warning: Port declaration of Instruction11_15_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:28: error: Scalar port ``Instruction11_15_out'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:27: warning: Port declaration of Instruction16_20_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:27: error: Scalar port ``Instruction16_20_out'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:31: warning: Port declaration of PC_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:31: error: Scalar port ``PC_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:34: warning: Port declaration of Read_Data1_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:34: error: Scalar port ``Read_Data1_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:35: warning: Port declaration of Read_Data2_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:35: error: Scalar port ``Read_Data2_out'' has a vectored net declaration [31:0].\r\n9 error(s) during elaboration.\r\n",
-        "timeout": false
-      },
-      "elaboration_status": "COMPILE_FAILED",
-      "environment_warning": false,
-      "artifact_generated": false,
-      "simulation": null,
-      "functional_status": "NOT_RUN",
-      "assertions": []
-    },
-    {
-      "id": "rar_immediate_tb",
-      "kind": "directed",
-      "top": "rar_immediate_tb",
-      "files": [
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "verification/rar_immediate_tb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "rar_immediate_tb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\rar_immediate_tb.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "verification/rar_immediate_tb.v"
-      ],
-      "compile": {
-        "returncode": 0,
-        "stdout": "",
-        "stderr": "",
-        "timeout": false
-      },
-      "elaboration_status": "ELABORATED",
-      "environment_warning": false,
-      "artifact_generated": true,
-      "simulation": {
-        "returncode": 1,
-        "stdout": "FAIL EX/MEM rt match replaced immediate: expected 116, got 199\r\nFAIL MEM/WB rt match replaced immediate: expected 116, got 188\r\nFATAL: verification/rar_immediate_tb.v:27: rar_immediate_tb: 2 assertions failed\r\n       Time: 6000  Scope: rar_immediate_tb\r\n",
-        "stderr": "",
-        "timeout": false
-      },
-      "functional_status": "FAIL",
-      "assertions": [
-        "FAIL EX/MEM rt match replaced immediate: expected 116, got 199",
-        "FAIL MEM/WB rt match replaced immediate: expected 116, got 188",
-        "FATAL: verification/rar_immediate_tb.v:27: rar_immediate_tb: 2 assertions failed"
-      ]
-    },
-    {
-      "id": "rar_consecutive_writes_tb",
-      "kind": "directed",
-      "top": "rar_consecutive_writes_tb",
-      "files": [
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "verification/rar_consecutive_writes_tb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "rar_consecutive_writes_tb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\rar_consecutive_writes_tb.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "verification/rar_consecutive_writes_tb.v"
-      ],
-      "compile": {
-        "returncode": 0,
-        "stdout": "",
-        "stderr": "",
-        "timeout": false
-      },
-      "elaboration_status": "ELABORATED",
-      "environment_warning": false,
-      "artifact_generated": true,
-      "simulation": {
-        "returncode": 1,
-        "stdout": "FATAL: verification/rar_consecutive_writes_tb.v:20: FAIL consecutive stores: second address expected 22, got 0\r\n       Time: 10000  Scope: rar_consecutive_writes_tb\r\n",
-        "stderr": "",
-        "timeout": false
-      },
-      "functional_status": "FAIL",
-      "assertions": [
-        "FATAL: verification/rar_consecutive_writes_tb.v:20: FAIL consecutive stores: second address expected 22, got 0"
-      ]
-    },
-    {
-      "id": "rar_consecutive_reads_tb",
-      "kind": "directed",
-      "top": "rar_consecutive_reads_tb",
-      "files": [
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "verification/rar_consecutive_reads_tb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "rar_consecutive_reads_tb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\rar_consecutive_reads_tb.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "verification/rar_consecutive_reads_tb.v"
-      ],
-      "compile": {
-        "returncode": 0,
-        "stdout": "",
-        "stderr": "",
-        "timeout": false
-      },
-      "elaboration_status": "ELABORATED",
-      "environment_warning": false,
-      "artifact_generated": true,
-      "simulation": {
-        "returncode": 1,
-        "stdout": "FATAL: verification/rar_consecutive_reads_tb.v:24: FAIL consecutive loads: second address expected 22, got 11\r\n       Time: 19000  Scope: rar_consecutive_reads_tb\r\n",
-        "stderr": "",
-        "timeout": false
-      },
-      "functional_status": "FAIL",
-      "assertions": [
-        "FATAL: verification/rar_consecutive_reads_tb.v:24: FAIL consecutive loads: second address expected 22, got 11"
-      ]
-    },
-    {
-      "id": "rar_original_program_tb",
-      "kind": "directed",
-      "top": "rar_original_program_tb",
-      "files": [
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "sources/03-final-project-rar/hazard/rtl/CPU.v",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-        "sources/03-final-project-rar/hazard/rtl/MUX.v",
-        "sources/03-final-project-rar/hazard/rtl/PC.v",
-        "sources/03-final-project-rar/hazard/rtl/Reg.v",
-        "verification/rar_original_program_tb.v"
-      ],
-      "compile_command": [
-        "iverilog.exe",
-        "-g2012",
-        "-Wall",
-        "-s",
-        "rar_original_program_tb",
-        "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\rar_original_program_tb.vvp",
-        "-B",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/03-final-project-rar/hazard/rtl/ALU.v",
-        "sources/03-final-project-rar/hazard/rtl/CPU.v",
-        "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-        "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-        "sources/03-final-project-rar/hazard/rtl/MUX.v",
-        "sources/03-final-project-rar/hazard/rtl/PC.v",
-        "sources/03-final-project-rar/hazard/rtl/Reg.v",
-        "verification/rar_original_program_tb.v"
-      ],
-      "compile": {
-        "returncode": 9,
-        "stdout": "",
-        "stderr": "sources/03-final-project-rar/hazard/rtl/Reg.v:26: warning: Port declaration of ALUOp_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:26: error: Scalar port ``ALUOp_out'' has a vectored net declaration [1:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:22: warning: Port declaration of ID_EX_Rs inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:22: error: Scalar port ``ID_EX_Rs'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:21: warning: Port declaration of ID_EX_Rt inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:21: error: Scalar port ``ID_EX_Rt'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:29: warning: Port declaration of Instruction0_15_to_32_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:29: error: Scalar port ``Instruction0_15_to_32_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:28: warning: Port declaration of Instruction11_15_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:28: error: Scalar port ``Instruction11_15_out'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:27: warning: Port declaration of Instruction16_20_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:27: error: Scalar port ``Instruction16_20_out'' has a vectored net declaration [4:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:31: warning: Port declaration of PC_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:31: error: Scalar port ``PC_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:34: warning: Port declaration of Read_Data1_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:34: error: Scalar port ``Read_Data1_out'' has a vectored net declaration [31:0].\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:35: warning: Port declaration of Read_Data2_out inherits dimensions from var/net.\r\nsources/03-final-project-rar/hazard/rtl/Reg.v:35: error: Scalar port ``Read_Data2_out'' has a vectored net declaration [31:0].\r\n9 error(s) during elaboration.\r\n",
-        "timeout": false
-      },
-      "elaboration_status": "COMPILE_FAILED",
-      "environment_warning": false,
-      "artifact_generated": false,
-      "simulation": null,
-      "functional_status": "NOT_RUN",
-      "assertions": []
     },
     {
       "id": "single_decode",
@@ -819,7 +389,7 @@
         "-s",
         "finalpj_single_decode_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\single_decode.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\single_decode.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/single-cycle/rtl/Controller.v",
@@ -836,15 +406,14 @@
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "CHECK_FAIL addi must not read/write data memory\r\nFATAL: verification/finalpj_single_decode_tb.v:16: FAIL: 1 assertion(s)\r\n       Time: 21000  Scope: finalpj_single_decode_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "PASS\r\nverification/finalpj_single_decode_tb.v:17: $finish called at 21000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "CHECK_FAIL addi must not read/write data memory",
-        "FATAL: verification/finalpj_single_decode_tb.v:16: FAIL: 1 assertion(s)"
+        "PASS"
       ]
     },
     {
@@ -862,7 +431,7 @@
         "-s",
         "finalpj_single_alu_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\single_alu_signed.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\single_alu_signed.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/single-cycle/rtl/ALU.v",
@@ -916,7 +485,7 @@
         "-s",
         "finalpj_single_isa_data_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\single_isa_data.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\single_isa_data.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/single-cycle/rtl/Add.v",
@@ -938,7 +507,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/single-cycle/rtl/Register_File.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -983,7 +552,7 @@
         "-s",
         "finalpj_single_addi_side_effect_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\single_addi_side_effect.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\single_addi_side_effect.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/single-cycle/rtl/Add.v",
@@ -1005,23 +574,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/single-cycle/rtl/Register_File.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED memory[5]=00000000 expected=12345678\r\nCHECK_FAIL addi must preserve data memory sentinel\r\nFATAL: verification/finalpj_single_addi_side_effect_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_single_addi_side_effect_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED memory[5]=12345678 expected=12345678\r\nPASS\r\nverification/finalpj_single_addi_side_effect_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED memory[5]=00000000 expected=12345678",
-        "CHECK_FAIL addi must preserve data memory sentinel",
-        "FATAL: verification/finalpj_single_addi_side_effect_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED memory[5]=12345678 expected=12345678",
+        "PASS"
       ]
     },
     {
@@ -1052,7 +620,7 @@
         "-s",
         "finalpj_single_jump_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\single_jump.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\single_jump.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/single-cycle/rtl/Add.v",
@@ -1074,7 +642,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/single-cycle/rtl/Register_File.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -1120,7 +688,7 @@
         "-s",
         "finalpj_single_taken_branch_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\single_taken_branch.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\single_taken_branch.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/single-cycle/rtl/Add.v",
@@ -1142,7 +710,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/single-cycle/rtl/Register_File.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "sources/02-final-pj/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -1176,7 +744,7 @@
         "-s",
         "finalpj_pipeline_decode_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\pipeline_decode.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\pipeline_decode.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/pipeline/rtl/CONTROLLER.v",
@@ -1193,15 +761,14 @@
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "CHECK_FAIL addi must not read/write data memory\r\nINFO: Controller has no jump output; jump redirection is checked by the CPU test.\r\nFATAL: verification/finalpj_pipeline_decode_tb.v:16: FAIL: 1 assertion(s)\r\n       Time: 21000  Scope: finalpj_pipeline_decode_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "INFO: Controller has no jump output; jump redirection is checked by the CPU test.\r\nPASS\r\nverification/finalpj_pipeline_decode_tb.v:17: $finish called at 21000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "CHECK_FAIL addi must not read/write data memory",
-        "FATAL: verification/finalpj_pipeline_decode_tb.v:16: FAIL: 1 assertion(s)"
+        "PASS"
       ]
     },
     {
@@ -1219,7 +786,7 @@
         "-s",
         "finalpj_pipeline_alu_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\pipeline_alu_signed.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\pipeline_alu_signed.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/pipeline/rtl/ALU.v",
@@ -1277,7 +844,7 @@
         "-s",
         "finalpj_pipeline_isa_data_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\pipeline_isa_data.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\pipeline_isa_data.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/pipeline/rtl/ADD.v",
@@ -1303,7 +870,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/pipeline/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/REGISTER_FILE.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -1352,7 +919,7 @@
         "-s",
         "finalpj_pipeline_addi_side_effect_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\pipeline_addi_side_effect.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\pipeline_addi_side_effect.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/pipeline/rtl/ADD.v",
@@ -1378,23 +945,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/pipeline/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/REGISTER_FILE.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED memory[5]=00000000 expected=12345678\r\nCHECK_FAIL addi must preserve data memory sentinel\r\nFATAL: verification/finalpj_pipeline_addi_side_effect_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_pipeline_addi_side_effect_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED memory[5]=12345678 expected=12345678\r\nPASS\r\nverification/finalpj_pipeline_addi_side_effect_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED memory[5]=00000000 expected=12345678",
-        "CHECK_FAIL addi must preserve data memory sentinel",
-        "FATAL: verification/finalpj_pipeline_addi_side_effect_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED memory[5]=12345678 expected=12345678",
+        "PASS"
       ]
     },
     {
@@ -1429,7 +995,7 @@
         "-s",
         "finalpj_pipeline_jump_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\pipeline_jump.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\pipeline_jump.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/pipeline/rtl/ADD.v",
@@ -1455,23 +1021,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/pipeline/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/REGISTER_FILE.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED jump fall-through r10=00000001 r11=00000002 r12=00000003\r\nCHECK_FAIL jump must skip fall-through writes\r\nFATAL: verification/finalpj_pipeline_jump_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_pipeline_jump_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_pipeline_jump_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED jump fall-through r10=00000001 r11=00000002 r12=00000003",
-        "CHECK_FAIL jump must skip fall-through writes",
-        "FATAL: verification/finalpj_pipeline_jump_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
       ]
     },
     {
@@ -1506,7 +1071,7 @@
         "-s",
         "finalpj_pipeline_taken_branch_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\pipeline_taken_branch.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\pipeline_taken_branch.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/pipeline/rtl/ADD.v",
@@ -1532,23 +1097,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/pipeline/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/DATAMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/INSTROCTIONMEMORY.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/pipeline/rtl/REGISTER_FILE.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/pipeline/rtl/MUX_5BITS.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED taken-beq fall-through r10=00000001 r11=00000002 r12=00000003\r\nCHECK_FAIL taken branch must suppress younger fall-through writes\r\nFATAL: verification/finalpj_pipeline_taken_branch_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_pipeline_taken_branch_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_pipeline_taken_branch_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED taken-beq fall-through r10=00000001 r11=00000002 r12=00000003",
-        "CHECK_FAIL taken branch must suppress younger fall-through writes",
-        "FATAL: verification/finalpj_pipeline_taken_branch_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
       ]
     },
     {
@@ -1567,7 +1131,7 @@
         "-s",
         "finalpj_hazard_decode_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_decode.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_decode.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/Controller.v",
@@ -1584,15 +1148,14 @@
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "CHECK_FAIL addi must not read/write data memory\r\nINFO: Controller has no jump output; jump redirection is checked by the CPU test.\r\nFATAL: verification/finalpj_hazard_decode_tb.v:16: FAIL: 1 assertion(s)\r\n       Time: 21000  Scope: finalpj_hazard_decode_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "INFO: Controller has no jump output; jump redirection is checked by the CPU test.\r\nPASS\r\nverification/finalpj_hazard_decode_tb.v:17: $finish called at 21000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "CHECK_FAIL addi must not read/write data memory",
-        "FATAL: verification/finalpj_hazard_decode_tb.v:16: FAIL: 1 assertion(s)"
+        "PASS"
       ]
     },
     {
@@ -1610,7 +1173,7 @@
         "-s",
         "finalpj_hazard_alu_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_alu_signed.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_alu_signed.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/ALU.v",
@@ -1671,7 +1234,7 @@
         "-s",
         "finalpj_hazard_isa_data_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_isa_data.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_isa_data.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/Add.v",
@@ -1700,7 +1263,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/hazard/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/hazard/rtl/DataMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/hazard/rtl/InstructionMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/Register_file.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -1752,7 +1315,7 @@
         "-s",
         "finalpj_hazard_addi_side_effect_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_addi_side_effect.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_addi_side_effect.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/Add.v",
@@ -1781,23 +1344,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/hazard/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/hazard/rtl/DataMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/hazard/rtl/InstructionMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/Register_file.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED memory[5]=00000000 expected=12345678\r\nCHECK_FAIL addi must preserve data memory sentinel\r\nFATAL: verification/finalpj_hazard_addi_side_effect_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_hazard_addi_side_effect_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED memory[5]=12345678 expected=12345678\r\nPASS\r\nverification/finalpj_hazard_addi_side_effect_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED memory[5]=00000000 expected=12345678",
-        "CHECK_FAIL addi must preserve data memory sentinel",
-        "FATAL: verification/finalpj_hazard_addi_side_effect_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED memory[5]=12345678 expected=12345678",
+        "PASS"
       ]
     },
     {
@@ -1835,7 +1397,7 @@
         "-s",
         "finalpj_hazard_jump_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_jump.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_jump.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/Add.v",
@@ -1864,23 +1426,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/hazard/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/hazard/rtl/DataMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/hazard/rtl/InstructionMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/Register_file.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED jump fall-through r10=00000001 r11=00000002 r12=00000003\r\nCHECK_FAIL jump must skip fall-through writes\r\nFATAL: verification/finalpj_hazard_jump_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_hazard_jump_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_hazard_jump_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED jump fall-through r10=00000001 r11=00000002 r12=00000003",
-        "CHECK_FAIL jump must skip fall-through writes",
-        "FATAL: verification/finalpj_hazard_jump_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
       ]
     },
     {
@@ -1918,7 +1479,7 @@
         "-s",
         "finalpj_hazard_taken_branch_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_taken_branch.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_taken_branch.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/Add.v",
@@ -1947,23 +1508,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/hazard/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/hazard/rtl/DataMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/hazard/rtl/InstructionMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/Register_file.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED taken-beq fall-through r10=00000001 r11=00000002 r12=00000003\r\nCHECK_FAIL taken branch must suppress younger fall-through writes\r\nFATAL: verification/finalpj_hazard_taken_branch_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_hazard_taken_branch_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_hazard_taken_branch_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED taken-beq fall-through r10=00000001 r11=00000002 r12=00000003",
-        "CHECK_FAIL taken branch must suppress younger fall-through writes",
-        "FATAL: verification/finalpj_hazard_taken_branch_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
       ]
     },
     {
@@ -2001,7 +1561,7 @@
         "-s",
         "finalpj_hazard_load_use_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_load_use.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_load_use.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/Add.v",
@@ -2030,7 +1590,7 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/hazard/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/hazard/rtl/DataMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/hazard/rtl/InstructionMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/Register_file.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
@@ -2082,7 +1642,7 @@
         "-s",
         "finalpj_hazard_dependent_store_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_dependent_store.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_dependent_store.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/Add.v",
@@ -2111,23 +1671,22 @@
       "compile": {
         "returncode": 0,
         "stdout": "",
-        "stderr": "sources/02-final-pj/hazard/rtl/EX_MEM.v:1: warning: timescale for EX_MEM inherited from another file.\r\nsources/02-final-pj/hazard/rtl/DataMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/ID_EX.v:1: warning: timescale for ID_EX inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/IF_ID.v:1: warning: timescale for IF_ID inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Hazard_detection_unit.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/MEM_WB.v:1: warning: timescale for MEM_WB inherited from another file.\r\nsources/02-final-pj/hazard/rtl/InstructionMemory.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\nsources/02-final-pj/hazard/rtl/Register_file.v:1: warning: timescale for Register_file inherited from another file.\r\nsources/02-final-pj/hazard/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "stderr": "",
         "timeout": false
       },
       "elaboration_status": "ELABORATED",
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "OBSERVED dependent-sw memory[0]=00000000 expected=00000005\r\nCHECK_FAIL store must forward produced register data\r\nFATAL: verification/finalpj_hazard_dependent_store_tb.v:15: FAIL: 1 assertion(s)\r\n       Time: 201000  Scope: finalpj_hazard_dependent_store_tb.finish_test\r\n",
+        "returncode": 0,
+        "stdout": "OBSERVED dependent-sw memory[0]=00000005 expected=00000005\r\nPASS\r\nverification/finalpj_hazard_dependent_store_tb.v:16: $finish called at 201000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "OBSERVED dependent-sw memory[0]=00000000 expected=00000005",
-        "CHECK_FAIL store must forward produced register data",
-        "FATAL: verification/finalpj_hazard_dependent_store_tb.v:15: FAIL: 1 assertion(s)"
+        "OBSERVED dependent-sw memory[0]=00000005 expected=00000005",
+        "PASS"
       ]
     },
     {
@@ -2146,7 +1705,7 @@
         "-s",
         "finalpj_hazard_units_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\hazard_forwarding_and_stall_units.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\hazard_forwarding_and_stall_units.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
         "sources/02-final-pj/hazard/rtl/ForwardingUnit.v",
@@ -2174,25 +1733,27 @@
       ]
     },
     {
-      "id": "source01_ex_directed",
+      "id": "s03-single_decode",
       "kind": "directed",
-      "top": "other_source01_ex_tb",
+      "top": "finalpj_single_decode_tb",
       "files": [
-        "sources/01-computer-program-final/EX.v",
-        "verification/other_source01_ex_tb.v"
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "verification/finalpj_single_decode_tb.v"
       ],
       "compile_command": [
         "iverilog.exe",
         "-g2012",
         "-Wall",
         "-s",
-        "other_source01_ex_tb",
+        "finalpj_single_decode_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\source01_ex_directed.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-single_decode.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/01-computer-program-final/EX.v",
-        "verification/other_source01_ex_tb.v"
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "verification/finalpj_single_decode_tb.v"
       ],
       "compile": {
         "returncode": 0,
@@ -2204,42 +1765,36 @@
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "PASS baseline_add result=12\r\nFAIL required_slt_true expected=1 actual=12\r\nFAIL required_slt_false expected=0 actual=12\r\nFAIL required_signed_slt expected=1 actual=12\r\nPASS jump_assert\r\nFAIL jump_clear_after_add expected=0 actual=1\r\nSUMMARY source01_ex checks=6 failures=4\r\nFATAL: verification/other_source01_ex_tb.v:87: Source 01 EX fails required behavior\r\n       Time: 76000  Scope: other_source01_ex_tb\r\n",
+        "returncode": 0,
+        "stdout": "PASS\r\nverification/finalpj_single_decode_tb.v:17: $finish called at 21000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "PASS baseline_add result=12",
-        "FAIL required_slt_true expected=1 actual=12",
-        "FAIL required_slt_false expected=0 actual=12",
-        "FAIL required_signed_slt expected=1 actual=12",
-        "PASS jump_assert",
-        "FAIL jump_clear_after_add expected=0 actual=1",
-        "FATAL: verification/other_source01_ex_tb.v:87: Source 01 EX fails required behavior"
+        "PASS"
       ]
     },
     {
-      "id": "source04_ex_directed",
+      "id": "s03-single_alu_signed",
       "kind": "directed",
-      "top": "other_source04_ex_tb",
+      "top": "finalpj_single_alu_tb",
       "files": [
-        "sources/04-final-project/rtl/Execution.v",
-        "verification/other_source04_ex_tb.v"
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "verification/finalpj_single_alu_tb.v"
       ],
       "compile_command": [
         "iverilog.exe",
         "-g2012",
         "-Wall",
         "-s",
-        "other_source04_ex_tb",
+        "finalpj_single_alu_tb",
         "-o",
-        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\verified-v12-full-access\\source04_ex_directed.vvp",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-single_alu_signed.vvp",
         "-B",
         "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
-        "sources/04-final-project/rtl/Execution.v",
-        "verification/other_source04_ex_tb.v"
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "verification/finalpj_single_alu_tb.v"
       ],
       "compile": {
         "returncode": 0,
@@ -2251,20 +1806,672 @@
       "environment_warning": false,
       "artifact_generated": true,
       "simulation": {
-        "returncode": 1,
-        "stdout": "PASS baseline_add result=12\r\nFAIL add_value_two_no_dependency expected=7 actual=5\r\nFAIL sub_value_two_no_dependency expected=-3 actual=-5\r\nFAIL or_value_two_no_dependency expected=6 actual=4\r\nFAIL addi_value_two_no_dependency expected=9 actual=7\r\nPASS baseline_signed_slt result=1\r\nSUMMARY source04_ex checks=6 failures=4\r\nFATAL: verification/other_source04_ex_tb.v:85: Source 04 EX corrupts legitimate data value 2\r\n       Time: 76000  Scope: other_source04_ex_tb\r\n",
+        "returncode": 0,
+        "stdout": "PASS\r\nverification/finalpj_single_alu_tb.v:13: $finish called at 16000 (1ps)\r\n",
         "stderr": "",
         "timeout": false
       },
-      "functional_status": "FAIL",
+      "functional_status": "PASS",
       "assertions": [
-        "PASS baseline_add result=12",
-        "FAIL add_value_two_no_dependency expected=7 actual=5",
-        "FAIL sub_value_two_no_dependency expected=-3 actual=-5",
-        "FAIL or_value_two_no_dependency expected=6 actual=4",
-        "FAIL addi_value_two_no_dependency expected=9 actual=7",
-        "PASS baseline_signed_slt result=1",
-        "FATAL: verification/other_source04_ex_tb.v:85: Source 04 EX corrupts legitimate data value 2"
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-single_isa_data",
+      "kind": "directed",
+      "top": "finalpj_single_isa_data_tb",
+      "files": [
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_isa_data_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_single_isa_data_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-single_isa_data.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_isa_data_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "sources/03-final-project-rar/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "PASS\r\nverification/finalpj_single_isa_data_tb.v:16: $finish called at 381000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-single_addi_side_effect",
+      "kind": "directed",
+      "top": "finalpj_single_addi_side_effect_tb",
+      "files": [
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_addi_side_effect_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_single_addi_side_effect_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-single_addi_side_effect.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_addi_side_effect_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "sources/03-final-project-rar/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "OBSERVED memory[5]=12345678 expected=12345678\r\nPASS\r\nverification/finalpj_single_addi_side_effect_tb.v:16: $finish called at 201000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "OBSERVED memory[5]=12345678 expected=12345678",
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-single_jump",
+      "kind": "directed",
+      "top": "finalpj_single_jump_tb",
+      "files": [
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_jump_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_single_jump_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-single_jump.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_jump_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "sources/03-final-project-rar/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_single_jump_tb.v:16: $finish called at 201000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-single_taken_branch",
+      "kind": "directed",
+      "top": "finalpj_single_taken_branch_tb",
+      "files": [
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_taken_branch_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_single_taken_branch_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-single_taken_branch.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+        "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+        "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+        "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+        "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+        "verification/finalpj_single_taken_branch_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "sources/03-final-project-rar/single-cycle/rtl/PC.v:1: warning: timescale for PC inherited from another file.\r\nsources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v:1: ...: The inherited timescale is here.\r\n",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_single_taken_branch_tb.v:16: $finish called at 201000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-pipeline_decode",
+      "kind": "directed",
+      "top": "finalpj_pipeline_decode_tb",
+      "files": [
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "verification/finalpj_pipeline_decode_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_pipeline_decode_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-pipeline_decode.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "verification/finalpj_pipeline_decode_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "INFO: Controller has no jump output; jump redirection is checked by the CPU test.\r\nPASS\r\nverification/finalpj_pipeline_decode_tb.v:17: $finish called at 21000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-pipeline_alu_signed",
+      "kind": "directed",
+      "top": "finalpj_pipeline_alu_tb",
+      "files": [
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "verification/finalpj_pipeline_alu_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_pipeline_alu_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-pipeline_alu_signed.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "verification/finalpj_pipeline_alu_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "PASS\r\nverification/finalpj_pipeline_alu_tb.v:13: $finish called at 16000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-pipeline_isa_data",
+      "kind": "directed",
+      "top": "finalpj_pipeline_isa_data_tb",
+      "files": [
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_isa_data_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_pipeline_isa_data_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-pipeline_isa_data.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_isa_data_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "PASS\r\nverification/finalpj_pipeline_isa_data_tb.v:16: $finish called at 381000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-pipeline_addi_side_effect",
+      "kind": "directed",
+      "top": "finalpj_pipeline_addi_side_effect_tb",
+      "files": [
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_addi_side_effect_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_pipeline_addi_side_effect_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-pipeline_addi_side_effect.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_addi_side_effect_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "OBSERVED memory[5]=12345678 expected=12345678\r\nPASS\r\nverification/finalpj_pipeline_addi_side_effect_tb.v:16: $finish called at 201000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "OBSERVED memory[5]=12345678 expected=12345678",
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-pipeline_jump",
+      "kind": "directed",
+      "top": "finalpj_pipeline_jump_tb",
+      "files": [
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_jump_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_pipeline_jump_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-pipeline_jump.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_jump_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_pipeline_jump_tb.v:16: $finish called at 201000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "OBSERVED jump fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
+      ]
+    },
+    {
+      "id": "s03-pipeline_taken_branch",
+      "kind": "directed",
+      "top": "finalpj_pipeline_taken_branch_tb",
+      "files": [
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_taken_branch_tb.v"
+      ],
+      "compile_command": [
+        "iverilog.exe",
+        "-g2012",
+        "-Wall",
+        "-s",
+        "finalpj_pipeline_taken_branch_tb",
+        "-o",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\s03-pipeline_taken_branch.vvp",
+        "-B",
+        "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\iverilog12_portable\\extracted\\app\\lib\\ivl",
+        "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+        "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+        "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+        "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+        "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+        "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+        "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+        "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/PC.v",
+        "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+        "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+        "verification/finalpj_pipeline_taken_branch_tb.v"
+      ],
+      "compile": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "",
+        "timeout": false
+      },
+      "elaboration_status": "ELABORATED",
+      "environment_warning": false,
+      "artifact_generated": true,
+      "simulation": {
+        "returncode": 0,
+        "stdout": "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000\r\nPASS\r\nverification/finalpj_pipeline_taken_branch_tb.v:16: $finish called at 201000 (1ps)\r\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "functional_status": "PASS",
+      "assertions": [
+        "OBSERVED taken-beq fall-through r10=00000000 r11=00000000 r12=00000000",
+        "PASS"
       ]
     }
   ]

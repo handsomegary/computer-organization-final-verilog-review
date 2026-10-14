@@ -1,42 +1,35 @@
 `timescale 1ns / 1ps
-
-module InstructionMemory(INSTRUCTION, ADDR, RST) ;
-
-	output [31:0]INSTRUCTION ;
-	input [31:0]ADDR ;
-	input RST ;
-
-	reg [31:0]memory[63:0] ;
-	
-	//assign INSTRUCTION = memory[ADDR] ; 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
-	wire [31:0] shifted_read_addr;
-	assign shifted_read_addr = { 2'b00,ADDR[31:2] };
-	assign INSTRUCTION = memory[shifted_read_addr];
-
-
-	integer k;
-	// I-MEM in this case is addressed by word, not by byte
-	
-
-	always @(posedge RST)
-	begin
-	
-		for (k=12; k<64; k=k+1) begin  // here Ou changes k=0 to k=16
-			memory[k] <= 32'b0;
-		end
-		
-		memory[0] <= 32'b001000_00000_00010_0000000000000010;// addi  $2  0 2
-		memory[1] <= 32'b001000_00000_00100_0000000000000100;//addi $4  0 4
-		memory[2] <= 32'b001000_00000_00101_0000000000000101;//addi $5 0 5
-		memory[3] <= 32'b001000_00000_00110_0000000000000110;//addi $6 0 6
-		memory[4] <= 32'b000000_00010_00100_00011_00000_100010;//sub $3 $2 $4
-		memory[5] <= 32'b000000_00011_00101_01101_00000_100100;//and $13 $3 $6
-		memory[6] <= 32'b000000_00110_00011_01110_00000_100101;//or $14 $5 $3
-		memory[7] <= 32'b000000_00011_00011_01111_00000_100000;//add $15 $3 $3
-		memory[8] <= 32'b101011_00011_00011_0000000000010000;// sw $15 16($3)
-	end
-
+module InstructionMemory(INSTRUCTION, ADDR, RST);
+  output [31:0] INSTRUCTION;
+  input [31:0] ADDR;
+  input RST;
+  reg [31:0] memory[0:1023];
+  wire valid_addr = (ADDR[31:12] == 0) && (ADDR[1:0] == 0);
+  assign INSTRUCTION = valid_addr ? memory[ADDR[11:2]] : 32'b0;
+  integer k;
+  // Demo covers all ten required instructions, byte address 400,
+  // negative immediate, signed SLT, taken/untaken branches and jump.
+  // Level C: dependencies execute without scheduled NOPs.
+  always @(posedge RST) begin
+    for (k=0; k<1024; k=k+1) memory[k] <= 32'b0;
+      memory[0] <= 32'h20010190; // addi $1,$0,400
+      memory[1] <= 32'h20020007; // addi $2,$0,7
+      memory[2] <= 32'hac220000; // sw $2,0($1)
+      memory[3] <= 32'h8c230000; // lw $3,0($1)
+      memory[4] <= 32'h00622020; // add $4,$3,$2
+      memory[5] <= 32'h2005ffff; // addi $5,$0,-1
+      memory[6] <= 32'h00a23022; // sub $6,$5,$2
+      memory[7] <= 32'h00823824; // and $7,$4,$2
+      memory[8] <= 32'h00e24025; // or $8,$7,$2
+      memory[9] <= 32'h00a2482a; // slt $9,$5,$2
+      memory[10] <= 32'h11200001; // beq $9,$0,wrong (not taken)
+      memory[11] <= 32'h11290002; // beq $9,$9,taken
+      memory[12] <= 32'h200a0063; // wrong path: addi $10,$0,99
+      memory[13] <= 32'hac220004; // wrong path: sw $2,4($1)
+      memory[14] <= 32'h08000010; // j done
+      memory[15] <= 32'h200b0063; // wrong path: addi $11,$0,99
+      memory[16] <= 32'h202cfffc; // addi $12,$1,-4
+      memory[17] <= 32'hac2c0008; // sw $12,8($1)
+      memory[18] <= 32'h08000012; // j stop
+  end
 endmodule

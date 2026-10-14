@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 // Directed verification only: TB initializes memories/registers after reset.
-// Original RTL files remain byte-for-byte unchanged.
+// Regression test for repaired RTL; addresses use standard byte addressing.
 module finalpj_pipeline_taken_branch_tb;
 reg CLK=0,RST=0; integer i;
 CPU_Pipeline uut(.CLK(CLK),.RST(RST));

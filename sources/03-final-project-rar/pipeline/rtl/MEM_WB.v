@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module MEM_WB (WRITE_ADDR_out, ALU_result_out, READ_DATA_out, WB_RegWrite_out, WB_MemToReg_out, 
 	WRITE_ADDR, ALU_result, READ_DATA, WB_RegWrite, WB_MemToReg, CLK, RST);
 

@@ -9,7 +9,7 @@ module Hazard_detection_unit(PCWRITE, IF_ID_WRITE, CTRL_SEL, RS_IF_ID, RT_IF_ID,
 
 	always@(*)begin
 
-		if( MEMREAD_ID_EX && ((RT_ID_EX==RS_IF_ID) || (RT_ID_EX==RT_IF_ID)) )
+		if( MEMREAD_ID_EX && (RT_ID_EX != 5'd0) && ((RT_ID_EX==RS_IF_ID) || (RT_ID_EX==RT_IF_ID)) )
 		begin
 			PCWRITE=1'b0;
 			IF_ID_WRITE=1'b0;

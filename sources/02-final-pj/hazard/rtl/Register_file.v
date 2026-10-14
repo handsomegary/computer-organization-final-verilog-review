@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module Register_file(
 READ_DATA_1, READ_DATA_2,READ_ADDR_1, READ_ADDR_2, WRITE_ADDR, WRITE_DATA,
 REGWRITE, CLK,RST
@@ -11,8 +12,8 @@ reg [31:0] Regfile[31:0];
 integer i;
 
 
-assign READ_DATA_1 =  Regfile[READ_ADDR_1];
-assign READ_DATA_2 =  Regfile[READ_ADDR_2];
+assign READ_DATA_1 = (READ_ADDR_1 == 0) ? 32'b0 : Regfile[READ_ADDR_1];
+assign READ_DATA_2 = (READ_ADDR_2 == 0) ? 32'b0 : Regfile[READ_ADDR_2];
 
 always@(negedge CLK or posedge RST)
 begin

@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 // Directed verification only: TB initializes memories/registers after reset.
-// Original RTL files remain byte-for-byte unchanged.
+// Regression test for repaired RTL; addresses use standard byte addressing.
 module finalpj_single_isa_data_tb;
 reg CLK=0,RST=0; integer i;
 CPU_SingleCycle uut(.CLK(CLK),.RST(RST));
@@ -29,7 +29,7 @@ initial begin
  uut.IM.memory[24]={6'h00,5'd1,5'd2,5'd11,5'd0,6'h25};
  uut.IM.memory[28]={6'h00,5'd4,5'd5,5'd12,5'd0,6'h2a};
  repeat(38) @(negedge CLK); #1;
- check(uut.DM.memory[8]===32'd20,"sw memory[8]"); check(uut.RF.Regfile[6]===32'd20,"lw"); check(uut.RF.Regfile[7]===32'd24,"add"); check(uut.RF.Regfile[8]===32'd3,"addi register result"); check(uut.RF.Regfile[9]===32'd16,"sub"); check(uut.RF.Regfile[10]===32'd4,"and"); check(uut.RF.Regfile[11]===32'd20,"or"); check(uut.RF.Regfile[12]===32'd1,"signed slt");
+ check(uut.DM.memory[2]===32'd20,"sw byte8 / memory[2]"); check(uut.RF.Regfile[6]===32'd20,"lw"); check(uut.RF.Regfile[7]===32'd24,"add"); check(uut.RF.Regfile[8]===32'd3,"addi register result"); check(uut.RF.Regfile[9]===32'd16,"sub"); check(uut.RF.Regfile[10]===32'd4,"and"); check(uut.RF.Regfile[11]===32'd20,"or"); check(uut.RF.Regfile[12]===32'd1,"signed slt");
  finish_test;
 end
 initial begin #2000; $fatal(1,"timeout");end

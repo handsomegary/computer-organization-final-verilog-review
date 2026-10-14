@@ -1,16 +1,44 @@
 {
-  "case_count": 38,
-  "elaboration": {
-    "COMPILE_FAILED": 5,
-    "ELABORATED": 33
-  },
-  "functional": {
-    "NOT_RUN": 7,
-    "SMOKE_ONLY_NO_ASSERTIONS": 4,
-    "FAIL": 17,
-    "PASS": 10
-  },
-  "assertions_explanation": "Expected-original failures are still functional FAIL, not compliance passes. Compile failures overlap three distinct source defect categories.",
-  "tool": "Official Bleyer Windows package: Icarus Verilog 12.0 (devel), s20150603-1539-g2693dd32b. Final run had no environment crashes or timeouts.",
-  "source_sha256_verified": 115
+  "passed": 173,
+  "total": 173,
+  "all_passed": true,
+  "suites": [
+    {
+      "suite": "regression",
+      "returncode": 0,
+      "passed": 38,
+      "total": 38,
+      "ok": true,
+      "results": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\results.json",
+      "log": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\regression\\runner.log"
+    },
+    {
+      "suite": "reference",
+      "returncode": 0,
+      "passed": 97,
+      "total": 97,
+      "ok": true,
+      "results": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\reference\\results.json",
+      "log": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\reference\\runner.log"
+    },
+    {
+      "suite": "pipeline",
+      "returncode": 0,
+      "passed": 22,
+      "total": 22,
+      "ok": true,
+      "results": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\pipeline\\results.json",
+      "log": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\pipeline\\runner.log"
+    },
+    {
+      "suite": "stress",
+      "returncode": 0,
+      "passed": 16,
+      "total": 16,
+      "ok": true,
+      "results": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\stress\\results.json",
+      "log": "C:\\Users\\User\\Documents\\Codex\\2026-10-13\\c-users-user-downloads-computer-organization\\work\\corrected-all\\stress\\runner.log"
+    }
+  ],
+  "manifest_sha256": "df90c30094c2e121afa93a98e8ba40b9a25cb0291d40de51cef287dfe97235f3"
 }

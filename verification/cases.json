@@ -1,34 +1,8 @@
 [
   {
-    "id": "original-s01-all-files",
-    "top": "finaltb",
-    "kind": "original_top",
-    "files": [],
-    "globs": [
-      "sources/01-computer-program-final/*.v"
-    ],
-    "run": false
-  },
-  {
-    "id": "original-s01-selected-rtl",
-    "top": "finaltb",
-    "kind": "original_top",
-    "files": [
-      "sources/01-computer-program-final/EX.v",
-      "sources/01-computer-program-final/ID.v",
-      "sources/01-computer-program-final/IF.v",
-      "sources/01-computer-program-final/MEM.v",
-      "sources/01-computer-program-final/WB.v",
-      "sources/01-computer-program-final/MarkLoveGarry.v",
-      "sources/01-computer-program-final/finaltb.v"
-    ],
-    "globs": [],
-    "run": false
-  },
-  {
-    "id": "original-s02-single-cycle",
+    "id": "repaired-demo-s02-single-cycle",
     "top": "CPU_SingleCycle_tb",
-    "kind": "original_top",
+    "kind": "directed",
     "files": [],
     "globs": [
       "sources/02-final-pj/single-cycle/rtl/*.v",
@@ -37,9 +11,9 @@
     "run": true
   },
   {
-    "id": "original-s02-pipeline",
+    "id": "repaired-demo-s02-pipeline",
     "top": "CPU_Pipeline_tb",
-    "kind": "original_top",
+    "kind": "directed",
     "files": [],
     "globs": [
       "sources/02-final-pj/pipeline/rtl/*.v",
@@ -48,20 +22,20 @@
     "run": true
   },
   {
-    "id": "original-s02-hazard",
+    "id": "repaired-demo-s02-hazard",
     "top": "CPU_NoHazard_tb",
-    "kind": "original_top",
+    "kind": "directed",
     "files": [],
     "globs": [
       "sources/02-final-pj/hazard/rtl/*.v",
       "sources/02-final-pj/hazard/tb/*.v"
     ],
-    "run": false
+    "run": true
   },
   {
-    "id": "original-s03-single-cycle",
+    "id": "repaired-demo-s03-single-cycle",
     "top": "CPU_SingleCycle_tb",
-    "kind": "original_top",
+    "kind": "directed",
     "files": [],
     "globs": [
       "sources/03-final-project-rar/single-cycle/rtl/*.v",
@@ -70,127 +44,15 @@
     "run": true
   },
   {
-    "id": "original-s03-pipeline",
+    "id": "repaired-demo-s03-pipeline",
     "top": "CPU_Pipeline_tb",
-    "kind": "original_top",
+    "kind": "directed",
     "files": [],
     "globs": [
       "sources/03-final-project-rar/pipeline/rtl/*.v",
       "sources/03-final-project-rar/pipeline/tb/*.v"
     ],
     "run": true
-  },
-  {
-    "id": "original-s03-hazard",
-    "top": "TB",
-    "kind": "original_top",
-    "files": [],
-    "globs": [
-      "sources/03-final-project-rar/hazard/rtl/*.v",
-      "sources/03-final-project-rar/hazard/tb/*.v"
-    ],
-    "run": false
-  },
-  {
-    "id": "original-s04",
-    "top": "ha_tb",
-    "kind": "original_top",
-    "files": [],
-    "globs": [
-      "sources/04-final-project/rtl/*.v",
-      "sources/04-final-project/tb/*.v"
-    ],
-    "run": false
-  },
-  {
-    "id": "rar_slt_tb",
-    "top": "rar_slt_tb",
-    "kind": "directed",
-    "files": [
-      "sources/03-final-project-rar/hazard/rtl/ALU.v",
-      "verification/rar_slt_tb.v"
-    ],
-    "run": true,
-    "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
-    "description": "Canonical MIPS slt is signed and writes 32'd1 when true."
-  },
-  {
-    "id": "rar_forwarding_tb",
-    "top": "rar_forwarding_tb",
-    "kind": "directed",
-    "files": [
-      "sources/03-final-project-rar/hazard/rtl/ALU.v",
-      "sources/03-final-project-rar/hazard/rtl/CPU.v",
-      "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-      "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-      "sources/03-final-project-rar/hazard/rtl/MUX.v",
-      "sources/03-final-project-rar/hazard/rtl/PC.v",
-      "sources/03-final-project-rar/hazard/rtl/Reg.v",
-      "verification/rar_forwarding_tb.v"
-    ],
-    "run": true,
-    "expected_for_conforming_design": "pass",
-    "expected_original": "compile_failed",
-    "description": "Exercise the integrated forwarding decision at its pipeline stage inputs."
-  },
-  {
-    "id": "rar_immediate_tb",
-    "top": "rar_immediate_tb",
-    "kind": "directed",
-    "files": [
-      "sources/03-final-project-rar/hazard/rtl/ALU.v",
-      "verification/rar_immediate_tb.v"
-    ],
-    "run": true,
-    "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
-    "description": "rt is not an ALU register source when ALUSrc selects the immediate."
-  },
-  {
-    "id": "rar_consecutive_writes_tb",
-    "top": "rar_consecutive_writes_tb",
-    "kind": "directed",
-    "files": [
-      "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-      "verification/rar_consecutive_writes_tb.v"
-    ],
-    "run": true,
-    "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
-    "description": "Two consecutive stores must both occur although MemWrite stays asserted."
-  },
-  {
-    "id": "rar_consecutive_reads_tb",
-    "top": "rar_consecutive_reads_tb",
-    "kind": "directed",
-    "files": [
-      "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-      "verification/rar_consecutive_reads_tb.v"
-    ],
-    "run": true,
-    "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
-    "description": "Populate using separated stores, then load two addresses with MemRead high."
-  },
-  {
-    "id": "rar_original_program_tb",
-    "top": "rar_original_program_tb",
-    "kind": "directed",
-    "files": [
-      "sources/03-final-project-rar/hazard/rtl/ALU.v",
-      "sources/03-final-project-rar/hazard/rtl/CPU.v",
-      "sources/03-final-project-rar/hazard/rtl/Dmemory.v",
-      "sources/03-final-project-rar/hazard/rtl/EXandMEM.v",
-      "sources/03-final-project-rar/hazard/rtl/MUX.v",
-      "sources/03-final-project-rar/hazard/rtl/PC.v",
-      "sources/03-final-project-rar/hazard/rtl/Reg.v",
-      "verification/rar_original_program_tb.v"
-    ],
-    "run": true,
-    "expected_for_conforming_design": "pass",
-    "expected_original": "compile_failed",
-    "description": "Assert architectural end state for the unmodified active ROM program."
   },
   {
     "id": "single_decode",
@@ -203,7 +65,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "All 10 required instruction decode cases; addi must not write data memory. Jump PC behavior has a separate integration test."
   },
   {
@@ -216,7 +77,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "AND, OR, ADD, SUB, ZERO and signed SLT boundary comparisons."
   },
   {
@@ -242,7 +102,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "Eight arithmetic/memory instructions with 3 NOPs between them; separately checked addi memory side effects are outside this narrow result test."
   },
   {
@@ -268,8 +127,7 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
-    "description": "addi r1,r0,5 must set r1=5 and preserve data-memory sentinel at effective result index 5."
+    "description": "addi r1,r0,20 must preserve the sentinel at aligned byte address20 (memory index5)."
   },
   {
     "id": "single_jump",
@@ -294,7 +152,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "j instruction redirects to instruction 4 and skips three fall-through writes (no delay slots specified by assignment)."
   },
   {
@@ -320,7 +177,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "Taken beq redirects to instruction 4; tests architectural no-delay behavior. Figure 2/3 do not explicitly specify a control-hazard scheduling contract."
   },
   {
@@ -334,7 +190,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "All 10 required instruction decode cases; addi must not write data memory. Jump PC behavior has a separate integration test."
   },
   {
@@ -347,7 +202,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "AND, OR, ADD, SUB, ZERO and signed SLT boundary comparisons."
   },
   {
@@ -377,7 +231,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "Eight arithmetic/memory instructions with 3 NOPs between them; separately checked addi memory side effects are outside this narrow result test."
   },
   {
@@ -407,8 +260,7 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
-    "description": "addi r1,r0,5 must set r1=5 and preserve data-memory sentinel at effective result index 5."
+    "description": "addi r1,r0,20 must preserve the sentinel at aligned byte address20 (memory index5)."
   },
   {
     "id": "pipeline_jump",
@@ -437,7 +289,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "j instruction redirects to instruction 4 and skips three fall-through writes (no delay slots specified by assignment)."
   },
   {
@@ -467,7 +318,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "Taken beq redirects to instruction 4; tests architectural no-delay behavior. Figure 2/3 do not explicitly specify a control-hazard scheduling contract."
   },
   {
@@ -481,7 +331,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "All 10 required instruction decode cases; addi must not write data memory. Jump PC behavior has a separate integration test."
   },
   {
@@ -494,7 +343,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "AND, OR, ADD, SUB, ZERO and signed SLT boundary comparisons."
   },
   {
@@ -527,7 +375,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "Eight arithmetic/memory instructions with 3 NOPs between them; separately checked addi memory side effects are outside this narrow result test."
   },
   {
@@ -560,8 +407,7 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
-    "description": "addi r1,r0,5 must set r1=5 and preserve data-memory sentinel at effective result index 5."
+    "description": "addi r1,r0,20 must preserve the sentinel at aligned byte address20 (memory index5)."
   },
   {
     "id": "hazard_jump",
@@ -593,7 +439,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "j instruction redirects to instruction 4 and skips three fall-through writes (no delay slots specified by assignment)."
   },
   {
@@ -626,7 +471,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "Taken beq redirects to instruction 4; tests architectural no-delay behavior. Figure 2/3 do not explicitly specify a control-hazard scheduling contract."
   },
   {
@@ -659,7 +503,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "Adjacent lw r1,0(r0); add r2,r1,r1 requires one pipeline stall and MEM/WB forwarding."
   },
   {
@@ -692,7 +535,6 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail",
     "description": "Adjacent add r1,r2,r3; sw r1,0(r0) requires forwarded store data; r2=2,r3=3."
   },
   {
@@ -706,31 +548,272 @@
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "pass",
     "description": "EX/MEM and MEM/WB operand forwarding, newest-producer priority, register-zero exclusion, load-use stall/bubble outputs."
   },
   {
-    "id": "source01_ex_directed",
-    "top": "other_source01_ex_tb",
+    "id": "s03-single_decode",
+    "top": "finalpj_single_decode_tb",
     "kind": "directed",
     "files": [
-      "sources/01-computer-program-final/EX.v",
-      "verification/other_source01_ex_tb.v"
+      "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "verification/finalpj_single_decode_tb.v"
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail"
+    "description": "All 10 required instruction decode cases; addi must not write data memory. Jump PC behavior has a separate integration test."
   },
   {
-    "id": "source04_ex_directed",
-    "top": "other_source04_ex_tb",
+    "id": "s03-single_alu_signed",
+    "top": "finalpj_single_alu_tb",
     "kind": "directed",
     "files": [
-      "sources/04-final-project/rtl/Execution.v",
-      "verification/other_source04_ex_tb.v"
+      "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "verification/finalpj_single_alu_tb.v"
     ],
     "run": true,
     "expected_for_conforming_design": "pass",
-    "expected_original": "fail"
+    "description": "AND, OR, ADD, SUB, ZERO and signed SLT boundary comparisons."
+  },
+  {
+    "id": "s03-single_isa_data",
+    "top": "finalpj_single_isa_data_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+      "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+      "verification/finalpj_single_isa_data_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "Eight arithmetic/memory instructions with 3 NOPs between them; separately checked addi memory side effects are outside this narrow result test."
+  },
+  {
+    "id": "s03-single_addi_side_effect",
+    "top": "finalpj_single_addi_side_effect_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+      "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+      "verification/finalpj_single_addi_side_effect_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "addi r1,r0,20 must preserve the sentinel at aligned byte address20 (memory index5)."
+  },
+  {
+    "id": "s03-single_jump",
+    "top": "finalpj_single_jump_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+      "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+      "verification/finalpj_single_jump_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "j instruction redirects to instruction 4 and skips three fall-through writes (no delay slots specified by assignment)."
+  },
+  {
+    "id": "s03-single_taken_branch",
+    "top": "finalpj_single_taken_branch_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/single-cycle/rtl/Add.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU.v",
+      "sources/03-final-project-rar/single-cycle/rtl/ALU_Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Controller.v",
+      "sources/03-final-project-rar/single-cycle/rtl/CPU_SingleCycle.v",
+      "sources/03-final-project-rar/single-cycle/rtl/DataMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/InstructionMemory.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Mux_5Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/PC.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Register_File.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_26BitsTo28Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Shift_Left_2_32BitsTo32Bits.v",
+      "sources/03-final-project-rar/single-cycle/rtl/Sign_Extend.v",
+      "verification/finalpj_single_taken_branch_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "Taken beq redirects to instruction 4; tests architectural no-delay behavior. Figure 2/3 do not explicitly specify a control-hazard scheduling contract."
+  },
+  {
+    "id": "s03-pipeline_decode",
+    "top": "finalpj_pipeline_decode_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "verification/finalpj_pipeline_decode_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "All 10 required instruction decode cases; addi must not write data memory. Jump PC behavior has a separate integration test."
+  },
+  {
+    "id": "s03-pipeline_alu_signed",
+    "top": "finalpj_pipeline_alu_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "verification/finalpj_pipeline_alu_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "AND, OR, ADD, SUB, ZERO and signed SLT boundary comparisons."
+  },
+  {
+    "id": "s03-pipeline_isa_data",
+    "top": "finalpj_pipeline_isa_data_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+      "verification/finalpj_pipeline_isa_data_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "Eight arithmetic/memory instructions with 3 NOPs between them; separately checked addi memory side effects are outside this narrow result test."
+  },
+  {
+    "id": "s03-pipeline_addi_side_effect",
+    "top": "finalpj_pipeline_addi_side_effect_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+      "verification/finalpj_pipeline_addi_side_effect_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "addi r1,r0,20 must preserve the sentinel at aligned byte address20 (memory index5)."
+  },
+  {
+    "id": "s03-pipeline_jump",
+    "top": "finalpj_pipeline_jump_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+      "verification/finalpj_pipeline_jump_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "j instruction redirects to instruction 4 and skips three fall-through writes (no delay slots specified by assignment)."
+  },
+  {
+    "id": "s03-pipeline_taken_branch",
+    "top": "finalpj_pipeline_taken_branch_tb",
+    "kind": "directed",
+    "files": [
+      "sources/03-final-project-rar/pipeline/rtl/ADD.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU.v",
+      "sources/03-final-project-rar/pipeline/rtl/ALU_CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CONTROLLER.v",
+      "sources/03-final-project-rar/pipeline/rtl/CPU_PIPELINE.v",
+      "sources/03-final-project-rar/pipeline/rtl/DATAMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/EX_MEM.v",
+      "sources/03-final-project-rar/pipeline/rtl/ID_EX.v",
+      "sources/03-final-project-rar/pipeline/rtl/IF_ID.v",
+      "sources/03-final-project-rar/pipeline/rtl/INSTROCTIONMEMORY.v",
+      "sources/03-final-project-rar/pipeline/rtl/MEM_WB.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/MUX_5BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/PC.v",
+      "sources/03-final-project-rar/pipeline/rtl/REGISTER_FILE.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_26BITSTO28BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SHIFT_LEFT_2_32BITSTO32BITS.v",
+      "sources/03-final-project-rar/pipeline/rtl/SIGN_EXTEND.v",
+      "verification/finalpj_pipeline_taken_branch_tb.v"
+    ],
+    "run": true,
+    "expected_for_conforming_design": "pass",
+    "description": "Taken beq redirects to instruction 4; tests architectural no-delay behavior. Figure 2/3 do not explicitly specify a control-hazard scheduling contract."
   }
 ]

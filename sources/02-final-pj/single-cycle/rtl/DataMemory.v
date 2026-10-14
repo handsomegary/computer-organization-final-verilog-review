@@ -1,62 +1,29 @@
 `timescale 1ns / 1ps
 
+// MIPS byte addresses; 256 aligned 32-bit words (1024 bytes).
+// Reads are combinational, stores occur at the rising edge of CLK.
+// This teaching core has no exception unit: invalid accesses read zero and
+// invalid stores do nothing. MEM_READ must be asserted for a valid read.
 module DataMemory (
-  output [31:0] READ_DATA,      // Output of Memory Address Contents
-  input [31:0] ADDR,          // Memory Address
-  input [31:0] WRITE_DATA,    // Memory Address Contents
+  output [31:0] READ_DATA,
+  input [31:0] ADDR,
+  input [31:0] WRITE_DATA,
   input MEM_WRITE, MEM_READ,
-  input RST, 
-  input CLK                 // All synchronous elements, including memories, should have a clock signal
+  input RST,
+  input CLK
 );
-
-  reg [31:0] memory[0:63];  // 64 words of 32-bit memory
-
-  assign READ_DATA = memory[ADDR] ;
-
+  reg [31:0] memory[0:255];
+  wire valid_address;
+  assign valid_address = (ADDR[1:0] == 2'b00) && (ADDR < 32'd1024);
+  assign READ_DATA = (MEM_READ && valid_address) ? memory[ADDR[9:2]] : 32'b0;
 
   integer i;
-  // Using @(addr) will lead to unexpected behavior as memories are synchronous elements like registers
   always @(posedge CLK or posedge RST) begin
-
-    if ( RST == 1 ) begin 
-     	for (i = 0; i < 63; i = i + 1) begin
-    	memory[i] <= 32'b0 ;
-     	end
+    if (RST) begin
+      for (i = 0; i < 256; i = i + 1)
+        memory[i] <= 32'b0;
+    end else if (MEM_WRITE && !MEM_READ && valid_address) begin
+      memory[ADDR[9:2]] <= WRITE_DATA;
     end
-
-    else begin
-    	if ( MEM_WRITE == 1'b1 && MEM_READ == 1'b0 ) 
-      		memory[ADDR] <= WRITE_DATA ;
-      	else 
-      		memory[ADDR] <= memory[ADDR] ;
-    end
-    
   end
-
 endmodule
-
-/*
-  integer i;
-
-  // Using @(addr) will lead to unexpected behavior as memories are synchronous elements like registers
-  always @(posedge CLK or posedge RST) begin
-
-    if ( RST == 1 ) begin 
-     	for (i = 0; i < 63; i = i + 1) begin
-    	memory[i] <= 32'b0 ;
-     	end
-    end
-
-    else begin
-    	if ( MEM_WRITE == 1'b1 && MEM_READ == 1'b0 ) 
-      		memory[ADDR] <= WRITE_DATA ;
-	    // Use MEM_READ to indicate a valid address is on the line and read the memory into a register at that address when MEM_READ is asserted
-	    else if ( MEM_WRITE == 1'b0 && MEM_READ == 1'b1 ) 
-	     	READ_DATA <= memory[ADDR] ;
-	    else 
-	     	READ_DATA <= 32'bZ ;
-    end
-    
-
-  end
-*/
