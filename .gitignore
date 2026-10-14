@@ -7,3 +7,12 @@ __pycache__/
 *.wdb
 *.exe
 *.log
+*.pyc
+vivado-sim*/
+*.jou
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+.Xil/

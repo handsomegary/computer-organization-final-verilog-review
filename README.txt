@@ -1,5 +1,7 @@
 Computer Organization Final Project — 已修正版本
 
+目前下載、官方題面與 Vivado Tcl 入口請先閱讀 README.md。
+
 本 repo 現在包含可通過驗證的五個修正版，以及重新撰寫的 A／B／C 參考實作。
 四份來源的初始擷取版保存在 Git commit 21d436e；目前檔案樹已移除需要大幅
 重作的舊設計，不再把已知損壞版本當成可用範例。
@@ -71,5 +73,7 @@ reports/changes.json                    修正、移除及替換對照
 source-manifest.json                    目前所有 .v 的 SHA-256 與原始來源對照
 
 未搬動或修改 Downloads 的原檔。舊碼仍可從初始 commit 找回。
-本次交付為 RTL、testbench 與驗證說明；未另製作課程要求的個人／小組 PDF，
-也未進行 FPGA synthesis、timing closure 或實體板驗證。
+本次交付包含 RTL、testbench、驗證說明、原版官方 FinalProject 簡報與 Vivado
+可攜式工程生成 Tcl。未另製作課程要求的個人／小組 PDF。Vivado commands 已
+核對官方文件並完成六分支 Tcl preflight/mock 檢查，本機未安裝 Vivado／XSim，
+沒有實際 Vivado 編譯／模擬、FPGA synthesis、timing closure 或實體板驗證。

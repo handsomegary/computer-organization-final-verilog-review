@@ -12,4 +12,6 @@ jobs:
           python-version: '3.12'
       - run: sudo apt-get update && sudo apt-get install -y iverilog
       - run: python verification/check_package.py
+      - run: python verification/check_course_specification.py
+      - run: python scripts/check_vivado_sim.py
       - run: python verification/check_all.py
