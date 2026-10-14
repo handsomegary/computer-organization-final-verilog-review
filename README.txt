@@ -40,7 +40,14 @@ MIPS32 的例外／溢位處理。不對齊或超出記憶體的 lw 回傳 0、s
 
 重跑全部驗證：Python 3 + Icarus Verilog
 
+python verification/check_package.py
 python verification/check_all.py
+
+下載套件包含所有 RTL、testbench 與測資產生器；不需要原始 Downloads
+資料夾或本機私有檔案。範例 ROM 在 HDL 內，額外向量由驗證腳本產生。
+Ubuntu 可先執行 sudo apt-get install iverilog；Windows 安裝 Icarus 後，
+將 iverilog/vvp 所在目錄加入 PATH，或使用下列明確工具路徑參數。
+GitHub Actions 會在乾淨 checkout 檢查封包並重跑全部 173 個案例。
 
 工具未在 PATH 時：
 python verification/check_all.py --iverilog C:/path/bin/iverilog.exe --vvp C:/path/bin/vvp.exe
