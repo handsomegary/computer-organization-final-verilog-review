@@ -8,6 +8,8 @@
 
 歷史匿名原碼、六份保留原 filesets／top／generics／part／version 並改成可攜路徑的 XPR，以及不同 ROM 的 ZIP／RAR 原始變體，保存在 [computer-organization-verilog-projects](https://github.com/handsomegary/computer-organization-verilog-projects)。本 repo 的修正版模擬不依賴那個 repo 或本機 Downloads 資料夾。
 
+[原專案附件](originals/archive/README.txt) 另保存 13 件已匿名的原學生報告、暫存器／指令 Excel 筆記、hazard 接線圖、參考文件與舊 ISE 設定；位元組與原 repo 已完成匿名的版本一致。[materials.json](originals/archive/materials.json) 保留完整來源、SHA-256 與文件驗證限制。這些報告與設定維持歷史原內容，沒有依修正版 RTL 改寫；損壞的 `Final.xise` 與空白 `EX.ucf` 也依原狀記錄，不作為可用工程範本。執行目前的 `.v` 與 testbench 不需要這些舊設定。一般課程講義／書籍另見[原 repo 的資料保存區](https://github.com/handsomegary/computer-organization-verilog-projects/tree/main/originals/archive)，作為補充參考。
+
 ## 重跑功能驗證
 
 需要 Python 3（建議 3.12）與 Icarus Verilog，將 `iverilog`、`vvp` 加入 PATH。Python runner 僅使用標準函式庫。從 repo 根目錄執行：
@@ -15,6 +17,7 @@
 ```sh
 python verification/check_course_specification.py
 python verification/check_package.py
+python originals/archive/check_materials.py
 python verification/check_all.py
 ```
 

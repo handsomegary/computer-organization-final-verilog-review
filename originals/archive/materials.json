@@ -1,0 +1,1150 @@
+{
+  "schema_version": 1,
+  "scope": "Exact byte mirrors of 13 previously anonymized historical original project materials. General course books and lectures are linked as additional archival references, not mirrored or runtime dependencies.",
+  "policy": "Keep full original preservation records and limitations unchanged. Historical reports and legacy configurations remain uncorrected; this archive does not establish repaired RTL correctness.",
+  "origin": {
+    "repository": "handsomegary/computer-organization-verilog-projects",
+    "materials_manifest_path": "originals/archive/materials.json",
+    "materials_manifest_sha256": "efa172a448a247177a6feaabeb5561c34d2a159278cbf4acf99cdb85ff6801a2",
+    "source_commit": "047447863295f2e74140aeb0728e2132f3cda364"
+  },
+  "files": [
+    {
+      "path": "originals/archive/project_01/EX.ucf",
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_bytes": 0,
+      "preservation_record": {
+        "path": "originals/archive/project_01/EX.ucf",
+        "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_bytes": 0,
+        "archived_bytes": 0,
+        "byte_exact": true,
+        "category": "historical_empty_or_corrupt_configuration",
+        "review_mirror": true,
+        "transformations": [],
+        "status": "Original empty constraint file; no physical constraints are supplied.",
+        "privacyQA": {
+          "metadata_and_content_inspection_passed": true
+        }
+      },
+      "preservation_record_sha256": "3fe1419ab06eb865a51ab7a36e692a8acf5196a3f525d7f3421ca36c98108920",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_01/corrupt-Final.xise",
+      "published_sha256": "15a92a2110859d40b44d7fd8c590df36410a969cf9011513342c5cf1198c7b9b",
+      "published_bytes": 37203,
+      "preservation_record": {
+        "path": "originals/archive/project_01/corrupt-Final.xise",
+        "source_sha256": "15a92a2110859d40b44d7fd8c590df36410a969cf9011513342c5cf1198c7b9b",
+        "archived_sha256": "15a92a2110859d40b44d7fd8c590df36410a969cf9011513342c5cf1198c7b9b",
+        "source_bytes": 37203,
+        "archived_bytes": 37203,
+        "byte_exact": true,
+        "category": "historical_empty_or_corrupt_configuration",
+        "review_mirror": true,
+        "transformations": [],
+        "status": "Original supplied file contains only zero bytes; unusable project file.",
+        "privacyQA": {
+          "all_zero_original_configuration": true,
+          "usable_project": false
+        }
+      },
+      "preservation_record_sha256": "9d83ceb485a3734b67602a5ffd8f97498c173d23c7e06b8ccb3d5c1edad1f96a",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_01/instruction-notes.xlsx",
+      "published_sha256": "004bc4194cd924759258a9b09cc7ca3bcb1e388de5a18b5d371a2857ef66e74b",
+      "published_bytes": 12310,
+      "preservation_record": {
+        "path": "originals/archive/project_01/instruction-notes.xlsx",
+        "source_sha256": "004bc4194cd924759258a9b09cc7ca3bcb1e388de5a18b5d371a2857ef66e74b",
+        "archived_sha256": "004bc4194cd924759258a9b09cc7ca3bcb1e388de5a18b5d371a2857ef66e74b",
+        "source_bytes": 12310,
+        "archived_bytes": 12310,
+        "byte_exact": true,
+        "category": "spreadsheet_notes",
+        "review_mirror": true,
+        "transformations": [],
+        "page_count": null,
+        "privacyQA": {
+          "read_only_content_and_metadata_inspection_passed": true,
+          "byte_exact_original_verified": true
+        }
+      },
+      "preservation_record_sha256": "a1a817e6a34bfb2b39d561c3fcd592c38ba6f23d532f0e7fcf853ad435171cc0",
+      "zip_container_verified": true
+    },
+    {
+      "path": "originals/archive/project_01/legacy-ise.xise",
+      "published_sha256": "5efcf8a9b3fa7660c44c7d70c6154b28da7650885b6d03f3c14e2326319e7b9f",
+      "published_bytes": 37923,
+      "preservation_record": {
+        "path": "originals/archive/project_01/legacy-ise.xise",
+        "source_sha256": "9364d50b5c6b45d2c3157cef907521d350bb82a57cdf471c995ba048ba1f1040",
+        "archived_sha256": "5efcf8a9b3fa7660c44c7d70c6154b28da7650885b6d03f3c14e2326319e7b9f",
+        "source_bytes": 37716,
+        "archived_bytes": 37923,
+        "byte_exact": false,
+        "category": "historical_project_configuration",
+        "review_mirror": true,
+        "transformations": [
+          "Identity-bearing module names anonymized consistently with archived RTL; source references relocated to committed relative RTL paths."
+        ],
+        "source_references": [
+          "../../../projects/project_01/rtl/EX.v",
+          "../../../projects/project_01/rtl/ID.v",
+          "../../../projects/project_01/rtl/IF.v",
+          "../../../projects/project_01/rtl/MEM.v",
+          "../../../projects/project_01/rtl/WB.v",
+          "../../../projects/project_01/rtl/CPU_Top.v",
+          "../../../projects/project_01/rtl/CPU_Alternate.v"
+        ],
+        "status": "Historical ISE configuration only; XML/source paths verified; no actual ISE execution",
+        "privacyQA": {
+          "metadata_and_content_inspection_passed": true
+        }
+      },
+      "preservation_record_sha256": "c4d4884e46351cecba2d5f8e89431a044c4ebfef176d1354e061203cb03068fd",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_01/register-state.xlsx",
+      "published_sha256": "878d94820c08cbaa01a238507b3027d11761fa15f5778edce765513e8fe65046",
+      "published_bytes": 10032,
+      "preservation_record": {
+        "path": "originals/archive/project_01/register-state.xlsx",
+        "source_sha256": "878d94820c08cbaa01a238507b3027d11761fa15f5778edce765513e8fe65046",
+        "archived_sha256": "878d94820c08cbaa01a238507b3027d11761fa15f5778edce765513e8fe65046",
+        "source_bytes": 10032,
+        "archived_bytes": 10032,
+        "byte_exact": true,
+        "category": "spreadsheet_notes",
+        "review_mirror": true,
+        "transformations": [],
+        "page_count": null,
+        "privacyQA": {
+          "read_only_content_and_metadata_inspection_passed": true,
+          "byte_exact_original_verified": true
+        }
+      },
+      "preservation_record_sha256": "6ffdc8a23d09a85e1154a288e11f927cb3cce60d6abf2fdc9ac3c77181c48df8",
+      "zip_container_verified": true
+    },
+    {
+      "path": "originals/archive/project_02/hazard-wiring.PNG",
+      "published_sha256": "fb9caf6a879a8539c33a926f64aff1388d9be11954696f0c4cc65f24036908a6",
+      "published_bytes": 188850,
+      "preservation_record": {
+        "path": "originals/archive/project_02/hazard-wiring.PNG",
+        "source_sha256": "fb9caf6a879a8539c33a926f64aff1388d9be11954696f0c4cc65f24036908a6",
+        "archived_sha256": "fb9caf6a879a8539c33a926f64aff1388d9be11954696f0c4cc65f24036908a6",
+        "source_bytes": 188850,
+        "archived_bytes": 188850,
+        "byte_exact": true,
+        "category": "original_notes",
+        "review_mirror": true,
+        "transformations": [],
+        "privacyQA": {
+          "read_only_content_and_metadata_inspection_passed": true,
+          "byte_exact_original_verified": true
+        }
+      },
+      "preservation_record_sha256": "9811e212f16a7d3221927115c45184918d9bcf077b3307ef30a523e6000e9ecc",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_02/report.pdf",
+      "published_sha256": "d9c6714e81b610fa985bc7415d926abad75de44f1ab59412a69fb108eb84cc55",
+      "published_bytes": 1383455,
+      "preservation_record": {
+        "path": "originals/archive/project_02/report.pdf",
+        "source_sha256": "8875f22cb5605aedb444a2559405f164b9ebfcfa6fd7e1dc2bf007a0639b6aa4",
+        "archived_sha256": "d9c6714e81b610fa985bc7415d926abad75de44f1ab59412a69fb108eb84cc55",
+        "source_bytes": 1387219,
+        "archived_bytes": 1383455,
+        "byte_exact": false,
+        "category": "student_report",
+        "review_mirror": true,
+        "transformations": [
+          "PDF text/image redaction permanently removes student identities and inserts random aliases; original technical content is retained.",
+          "Author/private metadata and identity-bearing ActualText/Alt structure properties cleared; source pages and technical content retained."
+        ],
+        "page_count": 10,
+        "redactions": [
+          {
+            "page": 1,
+            "redactions": [
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  235.00555419921875,
+                  328.89239501953125,
+                  363.17681884765625,
+                  357.93927001953125
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  240.0631103515625,
+                  375.4058837890625,
+                  368.234375,
+                  404.4527587890625
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  240.0631103515625,
+                  421.9193115234375,
+                  368.234375,
+                  450.9661865234375
+                ]
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  370.3978576660156,
+                  330.08575439453125,
+                  448.3822326660156,
+                  356.08575439453125
+                ],
+                "alias": "Veli"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  375.4554443359375,
+                  376.5992431640625,
+                  453.4398193359375,
+                  402.5992431640625
+                ],
+                "alias": "Romi"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  375.4554443359375,
+                  423.1126708984375,
+                  453.4398193359375,
+                  449.1126708984375
+                ],
+                "alias": "Suri"
+              }
+            ]
+          },
+          {
+            "page": 10,
+            "redactions": [
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  443.625,
+                  255.103515625,
+                  479.625,
+                  267.103515625
+                ],
+                "alias": "Veli"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  220.125,
+                  255.103515625,
+                  256.125,
+                  267.103515625
+                ],
+                "alias": "Romi"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  331.875,
+                  255.103515625,
+                  367.875,
+                  267.103515625
+                ],
+                "alias": "Suri"
+              }
+            ]
+          }
+        ],
+        "structure_identity_fields_removed": 0,
+        "verification": {
+          "page_count_preserved": true,
+          "identity_text_and_metadata_scan_passed": true,
+          "embedded_technical_images_byte_exact": true,
+          "rendered_page_count": 10,
+          "page_checks": [
+            {
+              "page": 1,
+              "pixels_outside_redactions_equal_source": true,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": null
+            },
+            {
+              "page": 2,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 3,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 4,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 5,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 6,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 7,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 8,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 9,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 10,
+              "pixels_outside_redactions_equal_source": true,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": null
+            }
+          ],
+          "visual_review_completed": true
+        },
+        "privacyQA": {
+          "text_metadata_and_structure_identity_scan_passed": true,
+          "visual_page_review_count": 10,
+          "technical_content_policy": "Original technical pages preserved; student identity changes only."
+        }
+      },
+      "preservation_record_sha256": "26658165e8900ba838c91991bce0086a4ca8c33cac0d6e9ce755cee07a85c216",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_03/References.docx",
+      "published_sha256": "2cc60d4d627c8be98a9c91dcc67542b793bbd8417d0928eb050a57e07bd15105",
+      "published_bytes": 7113,
+      "preservation_record": {
+        "path": "originals/archive/project_03/References.docx",
+        "source_sha256": "2cc60d4d627c8be98a9c91dcc67542b793bbd8417d0928eb050a57e07bd15105",
+        "archived_sha256": "2cc60d4d627c8be98a9c91dcc67542b793bbd8417d0928eb050a57e07bd15105",
+        "source_bytes": 7113,
+        "archived_bytes": 7113,
+        "byte_exact": true,
+        "category": "original_reference_links",
+        "review_mirror": true,
+        "transformations": [],
+        "page_count": null,
+        "verification": {
+          "visual_review_completed": true
+        },
+        "privacyQA": {
+          "identity_xml_scan_passed": true,
+          "native_word_read_only_render": true,
+          "visual_page_review_count": 1,
+          "reviewed_document_sha256": "2cc60d4d627c8be98a9c91dcc67542b793bbd8417d0928eb050a57e07bd15105",
+          "layout_policy": "Original document layout retained; existing unfinished draft content is preserved."
+        }
+      },
+      "preservation_record_sha256": "e07922db485cc3e69b30cd6a67cc89ab0e9c0a57504f8223735abb91ec1e136d",
+      "zip_container_verified": true
+    },
+    {
+      "path": "originals/archive/project_03/reference-processor-report-01.pdf",
+      "published_sha256": "8ca5fb547eee90494ec93d670662e9428f3a058576c812e7a2e1c431ffe54088",
+      "published_bytes": 1286062,
+      "preservation_record": {
+        "path": "originals/archive/project_03/reference-processor-report-01.pdf",
+        "source_sha256": "f2a96d3352d965293c7daaa17921457bbca74964601bb592e0f564c85c98b315",
+        "archived_sha256": "8ca5fb547eee90494ec93d670662e9428f3a058576c812e7a2e1c431ffe54088",
+        "source_bytes": 1291781,
+        "archived_bytes": 1286062,
+        "byte_exact": false,
+        "category": "student_report",
+        "review_mirror": true,
+        "transformations": [
+          "PDF text/image redaction permanently removes student identities and inserts random aliases; original technical content is retained.",
+          "Author/private metadata and identity-bearing ActualText/Alt structure properties cleared; source pages and technical content retained."
+        ],
+        "page_count": 19,
+        "redactions": [
+          {
+            "page": 1,
+            "redactions": [
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  261.8900146484375,
+                  328.98199462890625,
+                  333.4940185546875,
+                  348.9079895019531
+                ],
+                "alias": "Mira"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  252.52999877929688,
+                  349.531982421875,
+                  342.8359680175781,
+                  369.4579772949219
+                ],
+                "alias": "Neri"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  277.010009765625,
+                  370.4119873046875,
+                  318.0140380859375,
+                  390.3379821777344
+                ],
+                "alias": "Kira"
+              }
+            ]
+          }
+        ],
+        "structure_identity_fields_removed": 0,
+        "verification": {
+          "page_count_preserved": true,
+          "identity_text_and_metadata_scan_passed": true,
+          "embedded_technical_images_byte_exact": true,
+          "rendered_page_count": 19,
+          "page_checks": [
+            {
+              "page": 1,
+              "pixels_outside_redactions_equal_source": true,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": null
+            },
+            {
+              "page": 2,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 3,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 4,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 5,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 6,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 7,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 8,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 9,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 10,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 11,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 12,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 13,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 14,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 15,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 16,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 17,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 18,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 19,
+              "visual_content_unchanged": true
+            }
+          ],
+          "visual_review_completed": true
+        },
+        "privacyQA": {
+          "text_metadata_and_structure_identity_scan_passed": true,
+          "visual_page_review_count": 19,
+          "technical_content_policy": "Original technical pages preserved; student identity changes only."
+        },
+        "source_limitations": "The supplied original has 19 pages and ends with Conclusions. Its table of contents lists code/RTL appendices starting at page 20 that are absent from the supplied original. No missing appendix was invented."
+      },
+      "preservation_record_sha256": "b88ca78306dc9ca0015ed3708dec6cc96ffb5dd37b818123ded1f0d5fa54a554",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_03/reference-processor-report-02.pdf",
+      "published_sha256": "795939089dccca99f8eacf3d963adfd820c194add8c9d0aab9d2cf31ec71e0d5",
+      "published_bytes": 161959,
+      "preservation_record": {
+        "path": "originals/archive/project_03/reference-processor-report-02.pdf",
+        "source_sha256": "fe8bbcd46ac2c79502820277db5f896cd6feaab91c726386c257d417f82eda64",
+        "archived_sha256": "795939089dccca99f8eacf3d963adfd820c194add8c9d0aab9d2cf31ec71e0d5",
+        "source_bytes": 166458,
+        "archived_bytes": 161959,
+        "byte_exact": false,
+        "category": "student_report",
+        "review_mirror": true,
+        "transformations": [
+          "PDF text/image redaction permanently removes student identities and inserts random aliases; original technical content is retained.",
+          "Author/private metadata and identity-bearing ActualText/Alt structure properties cleared; source pages and technical content retained."
+        ],
+        "page_count": 28,
+        "redactions": [
+          {
+            "page": 1,
+            "redactions": [
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  94.3532943725586,
+                  204.5254364013672,
+                  199.40447998046875,
+                  224.56375122070312
+                ],
+                "alias": "Eira"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  293.29656982421875,
+                  204.5254364013672,
+                  462.5556945800781,
+                  224.56375122070312
+                ],
+                "alias": "Nila"
+              }
+            ]
+          }
+        ],
+        "structure_identity_fields_removed": 0,
+        "verification": {
+          "page_count_preserved": true,
+          "identity_text_and_metadata_scan_passed": true,
+          "embedded_technical_images_byte_exact": true,
+          "rendered_page_count": 28,
+          "page_checks": [
+            {
+              "page": 1,
+              "pixels_outside_redactions_equal_source": false,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": "MuPDF can round legacy text positions on rewritten pages; original technical text and images are retained."
+            },
+            {
+              "page": 2,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 3,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 4,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 5,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 6,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 7,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 8,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 9,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 10,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 11,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 12,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 13,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 14,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 15,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 16,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 17,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 18,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 19,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 20,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 21,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 22,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 23,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 24,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 25,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 26,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 27,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 28,
+              "visual_content_unchanged": true
+            }
+          ],
+          "visual_review_completed": true
+        },
+        "privacyQA": {
+          "text_metadata_and_structure_identity_scan_passed": true,
+          "visual_page_review_count": 28,
+          "technical_content_policy": "Original technical pages preserved; student identity changes only."
+        }
+      },
+      "preservation_record_sha256": "c7f5b43221cda6fbc8cb3d32d2a4b508ca7cc3143d34278b41664f5f1d8f0083",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_03/report.pdf",
+      "published_sha256": "41a35fb5a6e0152ad26fb4e795ed7a6136f1b5f064dae0a9a33c06b29af5ae12",
+      "published_bytes": 1043778,
+      "preservation_record": {
+        "path": "originals/archive/project_03/report.pdf",
+        "source_sha256": "fc917a4735ded27fbf62e6b2ef82eadfa3c7950891d87636ecfee01f60fbb47b",
+        "archived_sha256": "41a35fb5a6e0152ad26fb4e795ed7a6136f1b5f064dae0a9a33c06b29af5ae12",
+        "source_bytes": 1018649,
+        "archived_bytes": 1043778,
+        "byte_exact": false,
+        "category": "student_report",
+        "review_mirror": true,
+        "transformations": [
+          "PDF text/image redaction permanently removes student identities and inserts random aliases; original technical content is retained.",
+          "Author/private metadata and identity-bearing ActualText/Alt structure properties cleared; source pages and technical content retained."
+        ],
+        "page_count": 7,
+        "redactions": [
+          {
+            "page": 1,
+            "redactions": [
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  305.92999267578125,
+                  529.0800170898438,
+                  371.8099670410156,
+                  551.0400390625
+                ],
+                "alias": "Fira"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  305.92999267578125,
+                  565.0800170898438,
+                  371.8099670410156,
+                  587.0400390625
+                ],
+                "alias": "Tavi"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  305.92999267578125,
+                  601.1099853515625,
+                  371.8099670410156,
+                  623.0700073242188
+                ],
+                "alias": "Leto"
+              }
+            ]
+          },
+          {
+            "page": 7,
+            "redactions": [
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  178.10000610351562,
+                  331.5400085449219,
+                  244.010009765625,
+                  353.5
+                ],
+                "alias": "Fira"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  385.6300048828125,
+                  331.5400085449219,
+                  451.5099792480469,
+                  353.5
+                ],
+                "alias": "Tavi"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  281.80999755859375,
+                  331.5400085449219,
+                  347.7099914550781,
+                  353.5
+                ],
+                "alias": "Leto"
+              }
+            ]
+          }
+        ],
+        "structure_identity_fields_removed": 4,
+        "verification": {
+          "page_count_preserved": true,
+          "identity_text_and_metadata_scan_passed": true,
+          "embedded_technical_images_byte_exact": true,
+          "rendered_page_count": 7,
+          "page_checks": [
+            {
+              "page": 1,
+              "pixels_outside_redactions_equal_source": true,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": null
+            },
+            {
+              "page": 2,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 3,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 4,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 5,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 6,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 7,
+              "pixels_outside_redactions_equal_source": true,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": null
+            }
+          ],
+          "visual_review_completed": true
+        },
+        "privacyQA": {
+          "text_metadata_and_structure_identity_scan_passed": true,
+          "visual_page_review_count": 7,
+          "technical_content_policy": "Original technical pages preserved; student identity changes only."
+        }
+      },
+      "preservation_record_sha256": "25889b33fb544317cf560c83bc4f40abee1211f624c36e63bf39d19ffaddd4d8",
+      "zip_container_verified": false
+    },
+    {
+      "path": "originals/archive/project_04/report.docx",
+      "published_sha256": "c1ec995cdcb0bc12beeeff3937ed0c06ee9320c6c7bf3703617a0baffa00a065",
+      "published_bytes": 521573,
+      "preservation_record": {
+        "path": "originals/archive/project_04/report.docx",
+        "source_sha256": "1f39b93978973dd76812421b7c26fc0d3211c1f225562d79ac95b098d455d9be",
+        "archived_sha256": "c1ec995cdcb0bc12beeeff3937ed0c06ee9320c6c7bf3703617a0baffa00a065",
+        "source_bytes": 523917,
+        "archived_bytes": 521573,
+        "byte_exact": false,
+        "category": "student_report",
+        "review_mirror": true,
+        "transformations": [
+          "Student cover/header identity text replaced with random aliases; IDs removed; author/editing metadata anonymized. Other ZIP members retained byte-for-byte."
+        ],
+        "modified_ooxml_members": [
+          "word/document.xml",
+          "docProps/core.xml"
+        ],
+        "verification": {
+          "unmodified_members_byte_exact": true,
+          "identity_xml_scan_passed": true,
+          "visual_review_completed": true
+        },
+        "privacyQA": {
+          "identity_xml_scan_passed": true,
+          "native_word_read_only_render": true,
+          "visual_page_review_count": 3,
+          "reviewed_document_sha256": "c1ec995cdcb0bc12beeeff3937ed0c06ee9320c6c7bf3703617a0baffa00a065",
+          "layout_policy": "Original document layout retained; existing unfinished draft content is preserved."
+        }
+      },
+      "preservation_record_sha256": "6d4ced7ca8f8ced9123b14e94ebffc592e84860b5e7e1500ea6d0a82605ac647",
+      "zip_container_verified": true
+    },
+    {
+      "path": "originals/archive/project_04/report.pdf",
+      "published_sha256": "009f25f7209928bb5afbfb61a412e354a63bfdbb882318deb43a96e0cdb91b38",
+      "published_bytes": 2655178,
+      "preservation_record": {
+        "path": "originals/archive/project_04/report.pdf",
+        "source_sha256": "0c69c267e9b1bac9ad243117dec290fee4a96d4c0b68c7b6633f7883d7ad165f",
+        "archived_sha256": "009f25f7209928bb5afbfb61a412e354a63bfdbb882318deb43a96e0cdb91b38",
+        "source_bytes": 2177481,
+        "archived_bytes": 2655178,
+        "byte_exact": false,
+        "category": "student_report",
+        "review_mirror": true,
+        "transformations": [
+          "PDF text/image redaction permanently removes student identities and inserts random aliases; original technical content is retained.",
+          "Author/private metadata and identity-bearing ActualText/Alt structure properties cleared; source pages and technical content retained."
+        ],
+        "page_count": 15,
+        "redactions": [
+          {
+            "page": 1,
+            "redactions": [
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  251.6199951171875,
+                  602.1519775390625,
+                  332.58599853515625,
+                  622.0780029296875
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  251.6199951171875,
+                  638.1519775390625,
+                  332.58599853515625,
+                  658.0780029296875
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  251.6199951171875,
+                  674.1519775390625,
+                  332.58599853515625,
+                  694.0780029296875
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  251.6199951171875,
+                  710.1819458007812,
+                  332.58599853515625,
+                  730.1079711914062
+                ]
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  337.1000061035156,
+                  603.77197265625,
+                  391.1000061035156,
+                  621.77197265625
+                ],
+                "alias": "Sena"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  337.1000061035156,
+                  639.77197265625,
+                  391.1000061035156,
+                  657.77197265625
+                ],
+                "alias": "Zuri"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  337.1000061035156,
+                  675.77197265625,
+                  391.1000061035156,
+                  693.77197265625
+                ],
+                "alias": "Nori"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  337.1000061035156,
+                  711.8019409179688,
+                  391.1000061035156,
+                  729.8019409179688
+                ],
+                "alias": "Nova"
+              }
+            ]
+          },
+          {
+            "page": 15,
+            "redactions": [
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  127.97000122070312,
+                  499.6527099609375,
+                  200.0565643310547,
+                  517.4532470703125
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  217.05999755859375,
+                  499.6527099609375,
+                  289.14666748046875,
+                  517.4532470703125
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  306.1199951171875,
+                  499.6527099609375,
+                  378.20672607421875,
+                  517.4532470703125
+                ]
+              },
+              {
+                "kind": "student_id_removed",
+                "rect_pt": [
+                  395.45001220703125,
+                  499.6527099609375,
+                  467.5367431640625,
+                  517.4532470703125
+                ]
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  139.97000122070312,
+                  537.6099243164062,
+                  188.2100067138672,
+                  553.6898803710938
+                ],
+                "alias": "Sena"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  229.05999755859375,
+                  537.6099243164062,
+                  277.29998779296875,
+                  553.6898803710938
+                ],
+                "alias": "Zuri"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  318.1400146484375,
+                  537.6099243164062,
+                  366.3799743652344,
+                  553.6898803710938
+                ],
+                "alias": "Nori"
+              },
+              {
+                "kind": "student_name_replaced_by_random_alias",
+                "rect_pt": [
+                  407.45001220703125,
+                  537.6099243164062,
+                  455.6899719238281,
+                  553.6898803710938
+                ],
+                "alias": "Nova"
+              }
+            ]
+          }
+        ],
+        "structure_identity_fields_removed": 4,
+        "verification": {
+          "page_count_preserved": true,
+          "identity_text_and_metadata_scan_passed": true,
+          "embedded_technical_images_byte_exact": true,
+          "rendered_page_count": 15,
+          "page_checks": [
+            {
+              "page": 1,
+              "pixels_outside_redactions_equal_source": true,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": null
+            },
+            {
+              "page": 2,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 3,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 4,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 5,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 6,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 7,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 8,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 9,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 10,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 11,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 12,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 13,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 14,
+              "visual_content_unchanged": true
+            },
+            {
+              "page": 15,
+              "pixels_outside_redactions_equal_source": true,
+              "technical_text_outside_identity_fields_preserved": true,
+              "render_note": null
+            }
+          ],
+          "visual_review_completed": true
+        },
+        "privacyQA": {
+          "text_metadata_and_structure_identity_scan_passed": true,
+          "visual_page_review_count": 15,
+          "technical_content_policy": "Original technical pages preserved; student identity changes only."
+        }
+      },
+      "preservation_record_sha256": "63b8e0b18fd3e0e70c9c7b85617fbb58b032a6bd9b699c18508a4c1c4481b5e7",
+      "zip_container_verified": false
+    }
+  ],
+  "verification_summary": {
+    "files": 13,
+    "all_source_and_mirror_artifact_bytes_exact": true,
+    "all_preservation_records_exact": true,
+    "zip_containers_crc_checked": 4,
+    "historical_empty_files": 1,
+    "runtime_sources_modified": false,
+    "source_document_qa_records_preserved": true
+  }
+}
